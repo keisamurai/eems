@@ -48,10 +48,10 @@ def request_log(request):
     Args:
         request (byte): ユーザーリクエストの情報
     """
-    log_path = 'log/request.json'
+    log_path = 'log/request.log'
 
     if request.method == 'POST':
-        linelogger = getLogger('request_json')
+        linelogger = getLogger('request_log')
         linelogger.setLevel(DEBUG)
         file_handler = FileHandler(log_path, 'a')
         file_handler.setLevel(DEBUG)
