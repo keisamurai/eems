@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Code Master{% endblock %}
+{% load staticfiles %}
+
+{% block body %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">入室状況</h1>
+    </div>
+
+    <!-- Contents Row -->
+    <div class="row">
+
+        <!-- Illustrations -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">説明</h6>
+            </div>
+            <div class="card-body">
+                <p>これは入退室管理システムのデモページです。このページ以外の機能は実装されていません。Line Beaconを利用し、
+                   Line Botと友達になっているスマホが近づくとサーバーにWebhookされる仕組みです。
+                </p>
+            </div>
+        </div>
+
+        <!-- データ -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">ログ取得</h6>
+            </div>
+            <div class="card-body">
+                <p>{{log_txt}}</p> 
+            </div>
+        </div>
+
+    </div>
+    <!-- End of Contents Row -->
+
+</div>
+<!-- /.container-fluid -->
+
+{% endblock %}

@@ -1,0 +1,4 @@
+# do not share database bitween prod and dev
+db.sqlite3
+# leave log only dev
+log/request.log
