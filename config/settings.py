@@ -25,7 +25,7 @@ SECRET_KEY = ')_^^%v(8wshub=1#2@i2@(ii#-!o2tl9u*us(0_@se!lnxao04'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["lbeacon.azurewebsites.net"]
 
 
 # Application definition
