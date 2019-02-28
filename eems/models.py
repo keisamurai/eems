@@ -19,3 +19,20 @@ class User_Master(models.Model):
     company = models.CharField(max_length=128)
     # 所属名
     department = models.CharField(max_length=128)
+
+
+class Beacon_Log(models.Model):
+    """
+    description: ビーコンからきたログ
+    """
+    # replyToken
+    reply_token = models.CharField(max_length=32)
+    # line_id
+    line_id = models.CharField(max_length=33)
+    # timestamp
+    timestamp = models.DateTimeField()
+    # hwid
+    hwid = models.CharField(max_length=10)
+    # enter_or_leave
+    enter_or_leave = models.CharField(max_length=5)
+    

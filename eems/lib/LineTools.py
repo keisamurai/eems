@@ -5,19 +5,19 @@
 import requests
 import json
 import os
+import datetime
 
 from logging import getLogger, FileHandler, Formatter, DEBUG
+from eems.lib import DateCulc
 
 # info
 REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/push'
-CH_SECRET = '14938d0313af5d2729a1c5ecd5b4e03a'
-ACCESSTOKEN = 'aUXuURYgoEkCHAX1EOER3da96MUOJwU7OKo39vSPiYuy0z/m+BPWTtjkINdaYJhKYryUo2YET5A8T+c4sKOa5BqdbCMgk4mE+uPsSodTLWiTHZMroZfk5Yn0oZTuJJDlHYIgOcyw3vt1tu+Bx1/B0AdB04t89/1O/w1cDnyilFU='
 
-# header
-HEADER = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer' + ACCESSTOKEN
-}
+# # header
+# HEADER = {
+#     'Content-Type': 'application/json',
+#     'Authorization': 'Bearer' + ACCESSTOKEN
+# }
 
 
 def reply_text_beacon(reply_token, text):
@@ -50,12 +50,18 @@ def request_log(request):
     """
     log_path = 'log/request.log'
 
+    for event in request['events']:
+        timestamp = event['timestamp']
+    timestamp_date = DateCulc.DateFromMilli(timestamp)
+    timestamp = timestamp_date.strftime('%Y-%m-%d %H:%M:%S')
+
     if request.method == 'POST':
         linelogger = getLogger('request_log')
         linelogger.setLevel(DEBUG)
         file_handler = FileHandler(log_path, 'a')
         file_handler.setLevel(DEBUG)
         linelogger.addHandler(file_handler)
+        linelogger.debug(timestamp)
         linelogger.debug(json.loads(request.body.decode('utf-8')))
 
     return
