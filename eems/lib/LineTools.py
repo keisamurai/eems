@@ -50,10 +50,10 @@ def request_log(request):
     """
     log_path = 'log/request.log'
 
-    for event in request['events']:
-        timestamp = event['timestamp']
-    timestamp_date = DateCulc.DateFromMilli(timestamp)
-    timestamp = timestamp_date.strftime('%Y-%m-%d %H:%M:%S')
+    # for event in request['events']:
+    #     timestamp = event['timestamp']
+    # timestamp_date = DateCulc.DateFromMilli(timestamp)
+    # timestamp = timestamp_date.strftime('%Y-%m-%d %H:%M:%S')
 
     if request.method == 'POST':
         linelogger = getLogger('request_log')
@@ -61,7 +61,7 @@ def request_log(request):
         file_handler = FileHandler(log_path, 'a')
         file_handler.setLevel(DEBUG)
         linelogger.addHandler(file_handler)
-        linelogger.debug(timestamp)
+        # linelogger.debug(timestamp)
         linelogger.debug(json.loads(request.body.decode('utf-8')))
 
     return
