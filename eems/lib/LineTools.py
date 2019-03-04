@@ -59,19 +59,17 @@ def insert_request_log_tbl(request):
     # データ取得(from request)
     # --------------------
     request_json = json.loads(request.body.decode('utf-8'))
-    print(request_json)
     # --------------------
     # データ取得(from Json)
     # --------------------
     if request.method == 'POST':
-        evnet = request_json['events']
-
-        reply_token = event['replyToken']
-        message_type = event['type']
-        user_id = event['source']['userId']
-        timestamp = event['timestamp']
-        hwid = event['beacon']['hwid']
-        enter_or_leave = event['beacon']['type']
+        for event in request_json['events']:
+            reply_token = event['replyToken']
+            message_type = event['type']
+            user_id = event['source']['userId']
+            timestamp = event['timestamp']
+            hwid = event['beacon']['hwid']
+            enter_or_leave = event['beacon']['type']
     else:
         return rtn
 
