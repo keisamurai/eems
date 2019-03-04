@@ -22,5 +22,6 @@ import eems.views as eems_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', eems_views.IndexView.as_view()),
+    path('log/', eems_views.LogView.as_view()),
     path('webhook', eems_views.webhook, name='webhook'),
 ]

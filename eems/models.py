@@ -35,4 +35,3 @@ class Beacon_Log(models.Model):
     hwid = models.CharField(max_length=10)
     # enter_or_leave
     enter_or_leave = models.CharField(max_length=5)
-    

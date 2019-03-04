@@ -2,3 +2,5 @@
 db.sqlite3
 # leave log only dev
 log/request.log
+# leave test only dev
+test

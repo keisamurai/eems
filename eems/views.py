@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView
 
 import json
+from django_pandas.io import read_frame
 
 from eems.models import *
 from eems.lib import LineTools
@@ -34,6 +35,22 @@ class IndexView(TemplateView):
         return render(self.request, self.template_name, context)
 
 
+class LogView(TemplateView):
+    template_name = "log.html"
+
+    def get(self, request, *args, **kwargs):
+        context = super(LogView, self).get_context_data(**kwargs)
+
+        # ------------------
+        # set beacon log
+        # ------------------
+        beacon_log = Beacon_Log.objects.all()
+        df_beacon_log = read_frame(beacon_log)
+        context['beacon_log'] = df_beacon_log
+
+        return render(self.request, self.template_name, context)
+
+
 def webhook(request):
     """Line Beaconのリクエストを受け取り、jsonファイルを生成する
     ref URL:https://qiita.com/__init__/items/8ae8401e9f0ff281ae64
@@ -44,6 +61,7 @@ def webhook(request):
     """
 
     LineTools.request_log(request)
+    LineTools.insert_request_log_tbl(request)
 
     # ステータスコード 200を返却 (画面には何も表示しないのでなんでもいい)
     return HttpResponse(status=200)

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Log{% endblock %}
+{% load staticfiles %}
+
+{% block body %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">入室状況</h1>
+    </div>
+
+    <!-- Contents Row -->
+    <div class="row">
+
+        <!-- Illustrations -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">説明</h6>
+            </div>
+            <div class="card-body">
+                <p>これは入退室管理システムのデモページです。このページ以外の機能は実装されていません。Line Beaconを利用し、
+                    Line Botと友達になっているスマホが近づくとサーバーにWebhookされる仕組みです。
+                </p>
+            </div>
+        </div>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">DataTables</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="log-table" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                            {% for index in beacon_log %}
+                                <th>{{index}}</th>
+                            {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for index, bls in beacon_log.iterrows %}
+                            <tr>
+                                {% for bl in bls %}
+                                <th style="font-weight: lighter">{{bl}}</th>
+                                {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of Contents Row -->
+
+</div>
+<!-- /.container-fluid -->
+
+
+<script>
+// ///////////////////
+// table
+// ///////////////////
+$(document).ready(function () {
+    $('#log-table').DataTable({
+      responsive: true,
+      // sort機能の有効化
+      ordering: true,
+      // ページの表示件数を変更する
+      displayLength: 10,
+    });
+  });
+</script>
+{% endblock %}
