@@ -44,7 +44,7 @@ class LogView(TemplateView):
         # ------------------
         # set beacon log
         # ------------------
-        beacon_log = get_object_or_404(Beacon_Log)
+        beacon_log = Beacon_Log.objects.all()
         df_beacon_log = read_frame(beacon_log)
         context['beacon_log'] = df_beacon_log
 
