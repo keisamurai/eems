@@ -260,3 +260,130 @@ Not Found: /buttons.html
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.004) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 51680
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 0
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+Exception while resolving variable 'iterrows' in template 'log.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\db\models\query.py", line 282, in __getitem__
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'QuerySet' object has no attribute 'iterrows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'iterrows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [iterrows] in <QuerySet [<Beacon_Log: Beacon_Log object (1)>, <Beacon_Log: Beacon_Log object (2)>, <Beacon_Log: Beacon_Log object (3)>, <Beacon_Log: Beacon_Log object (4)>, <Beacon_Log: Beacon_Log object (5)>, <Beacon_Log: Beacon_Log object (6)>, <Beacon_Log: Beacon_Log object (7)>, <Beacon_Log: Beacon_Log object (8)>, <Beacon_Log: Beacon_Log object (9)>, <Beacon_Log: Beacon_Log object (10)>]>
+"GET /log/ HTTP/1.1" 200 9388
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+(0.004) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+Exception while resolving variable 'iterrows' in template 'log.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\db\models\query.py", line 282, in __getitem__
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'QuerySet' object has no attribute 'iterrows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'iterrows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [iterrows] in <QuerySet [<Beacon_Log: Beacon_Log object (1)>, <Beacon_Log: Beacon_Log object (2)>, <Beacon_Log: Beacon_Log object (3)>, <Beacon_Log: Beacon_Log object (4)>, <Beacon_Log: Beacon_Log object (5)>, <Beacon_Log: Beacon_Log object (6)>, <Beacon_Log: Beacon_Log object (7)>, <Beacon_Log: Beacon_Log object (8)>, <Beacon_Log: Beacon_Log object (9)>, <Beacon_Log: Beacon_Log object (10)>]>
+"GET /log/ HTTP/1.1" 200 8958
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.004) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+Exception while resolving variable 'iterrows' in template 'log.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\db\models\query.py", line 282, in __getitem__
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'QuerySet' object has no attribute 'iterrows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'iterrows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [iterrows] in <QuerySet [<Beacon_Log: Beacon_Log object (1)>, <Beacon_Log: Beacon_Log object (2)>, <Beacon_Log: Beacon_Log object (3)>, <Beacon_Log: Beacon_Log object (4)>, <Beacon_Log: Beacon_Log object (5)>, <Beacon_Log: Beacon_Log object (6)>, <Beacon_Log: Beacon_Log object (7)>, <Beacon_Log: Beacon_Log object (8)>, <Beacon_Log: Beacon_Log object (9)>, <Beacon_Log: Beacon_Log object (10)>]>
+"GET /log/ HTTP/1.1" 200 8689
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14243
+"GET /static/images/favicon.png HTTP/1.1" 200 1503

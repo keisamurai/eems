@@ -45,9 +45,11 @@ class LogView(TemplateView):
         # ------------------
         # set beacon log
         # ------------------
+
+        # timestampにtimezoneを適用するために、read_frame()をつかうことはしない
+        # ※read_frameをつかうと、テンプレート適用時にtimezoneが適用されない
         beacon_log = Beacon_Log.objects.all()
-        df_beacon_log = read_frame(beacon_log)
-        context['beacon_log'] = df_beacon_log
+        context['beacon_log'] = beacon_log
 
         return render(self.request, self.template_name, context)
 

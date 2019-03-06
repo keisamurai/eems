@@ -8,7 +8,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">入室状況</h1>
+        <h1 class="h3 mb-0 text-gray-800">Line Beacon ログ</h1>
     </div>
 
     <!-- Contents Row -->
@@ -36,17 +36,21 @@
                     <table class="table table-bordered" id="log-table" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                            {% for index in beacon_log %}
-                                <th>{{index}}</th>
-                            {% endfor %}
+                                <th>reply token</th>
+                                <th>line id</th>
+                                <th>timestamp</th>
+                                <th>hwid</th>
+                                <th>enter or leave</th>
                             </tr>
-                        </thead>
+                    </thead>
                         <tbody>
-                            {% for index, bls in beacon_log.iterrows %}
+                            {% for bl in beacon_log %}
                             <tr>
-                                {% for bl in bls %}
-                                <th style="font-weight: lighter">{{bl}}</th>
-                                {% endfor %}
+                                <th style="font-weight: lighter">{{bl.reply_token}}</th>
+                                <th style="font-weight: lighter">{{bl.line_id}}</th>
+                                <th style="font-weight: lighter">{{bl.timestamp}}</th>
+                                <th style="font-weight: lighter">{{bl.hwid}}</th>
+                                <th style="font-weight: lighter">{{bl.enter_or_leave}}</th>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -72,7 +76,7 @@ $(document).ready(function () {
       // sort機能の有効化
       ordering: true,
       // ページの表示件数を変更する
-      displayLength: 10,
+      displayLength: 50,
     });
   });
 </script>
