@@ -411,3 +411,542 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [iterrows] in <
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 10; args=()
+Internal Server Error: /log/
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 52, in get
+    test = beacon_log[10].timestamp
+  File "C:\python\lib\site-packages\django\db\models\query.py", line 307, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'kqa3nz2olopx17zwb8e70q9i77ckyphb' AND "django_session"."expire_date" > '2019-03-07 12:22:26.466997'); args=('kqa3nz2olopx17zwb8e70q9i77ckyphb', '2019-03-07 12:22:26.466997')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /log/ HTTP/1.1" 500 82762
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14200
+"GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/fontawesome-free/scss/fontawesome.scss HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/js/sb-admin-2.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14308
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14308
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.003) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.005) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.004) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.003) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+"GET / HTTP/1.1" 200 51680
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+(0.003) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14947
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14979
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14979
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14979
+(0.003) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14979
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14979
+"GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/bootstrap/vendor/fontawesome-free/scss/fontawesome.scss HTTP/1.1" 200 247
+"GET /static/s3/css/structure.css HTTP/1.1" 200 322
+"GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 200 5222
+"GET /static/bootstrap/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2085
+"GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/bootstrap/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 82411
+"GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+Internal Server Error: /log/
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 56, in get
+    return render(self.request, self.template_name, context)
+  File "C:\python\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\python\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\python\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\python\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\python\lib\site-packages\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\python\lib\site-packages\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\python\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\python\lib\site-packages\django\template\base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\python\lib\site-packages\django\template\base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "C:\python\lib\site-packages\django\template\base.py", line 484, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "C:\python\lib\site-packages\django\template\base.py", line 502, in extend_nodelist
+    token, '%r must be the first tag in the template.' % node,
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends "base.html"> must be the first tag in the template.
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'kqa3nz2olopx17zwb8e70q9i77ckyphb' AND "django_session"."expire_date" > '2019-03-07 13:20:05.083728'); args=('kqa3nz2olopx17zwb8e70q9i77ckyphb', '2019-03-07 13:20:05.083728')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /log/ HTTP/1.1" 500 140750
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\python\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern ''>], [<URLPattern 'log/'>], [<URLPattern 'webhook' [name='webhook']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2299
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14979
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+Internal Server Error: /log/
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'localtime'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 56, in get
+    return render(self.request, self.template_name, context)
+  File "C:\python\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\python\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\python\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\python\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\python\lib\site-packages\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\python\lib\site-packages\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\python\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\python\lib\site-packages\django\template\base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\python\lib\site-packages\django\template\base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "C:\python\lib\site-packages\django\template\base.py", line 483, in parse
+    raise self.error(token, e)
+  File "C:\python\lib\site-packages\django\template\base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\python\lib\site-packages\django\template\loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "C:\python\lib\site-packages\django\template\base.py", line 483, in parse
+    raise self.error(token, e)
+  File "C:\python\lib\site-packages\django\template\base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\python\lib\site-packages\django\template\loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\python\lib\site-packages\django\template\base.py", line 483, in parse
+    raise self.error(token, e)
+  File "C:\python\lib\site-packages\django\template\base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\python\lib\site-packages\django\template\defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\python\lib\site-packages\django\template\base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\python\lib\site-packages\django\template\base.py", line 533, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 51: 'localtime', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'kqa3nz2olopx17zwb8e70q9i77ckyphb' AND "django_session"."expire_date" > '2019-03-07 13:24:48.155821'); args=('kqa3nz2olopx17zwb8e70q9i77ckyphb', '2019-03-07 13:24:48.155821')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /log/ HTTP/1.1" 500 193500
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+Internal Server Error: /webhook
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 69, in webhook
+    LineTools.insert_request_log_tbl(request)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\LineTools.py", line 88, in insert_request_log_tbl
+    if DBConnect.insert_info(Const.TBL_BEACON_LOG_NAME, dic_data):
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\DBConnect.py", line 52, in insert_info
+    os.chdir(Const.EEMS_PJ_ROOT)
+OSError: [WinError 123] ファイル名、ディレクトリ名、またはボリューム ラベルの構文が間違っています。: "'E:\\\\pj\\\\xedge\\\\PJ_entry_and_exit_management\\\\02.dev_pgm\\\\eems'"
+"POST /webhook HTTP/1.1" 500 77414
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.005) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+Internal Server Error: /webhook
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 69, in webhook
+    LineTools.insert_request_log_tbl(request)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\LineTools.py", line 88, in insert_request_log_tbl
+    if DBConnect.insert_info(Const.TBL_BEACON_LOG_NAME, dic_data):
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\DBConnect.py", line 52, in insert_info
+    os.chdir(Const.EEMS_PJ_ROOT)
+OSError: [WinError 123] ファイル名、ディレクトリ名、またはボリューム ラベルの構文が間違っています。: "'E:\\\\pj\\\\xedge\\\\PJ_entry_and_exit_management\\\\02.dev_pgm\\\\eems'"
+"POST /webhook HTTP/1.1" 500 77433
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+Internal Server Error: /webhook
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 69, in webhook
+    LineTools.insert_request_log_tbl(request)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\LineTools.py", line 88, in insert_request_log_tbl
+    if DBConnect.insert_info(Const.TBL_BEACON_LOG_NAME, dic_data):
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\DBConnect.py", line 52, in insert_info
+    os.chdir(Const.EEMS_PJ_ROOT)
+OSError: [WinError 123] ファイル名、ディレクトリ名、またはボリューム ラベルの構文が間違っています。: "'E:\\\\pj\\\\xedge\\\\PJ_entry_and_exit_management\\\\02.dev_pgm\\\\eems'"
+"POST /webhook HTTP/1.1" 500 77452
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Internal Server Error: /webhook
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 69, in webhook
+    LineTools.insert_request_log_tbl(request)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\LineTools.py", line 88, in insert_request_log_tbl
+    if DBConnect.insert_info(Const.TBL_BEACON_LOG_NAME, dic_data):
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\lib\DBConnect.py", line 52, in insert_info
+    os.chdir(Const.EEMS_PJ_ROOT)
+OSError: [WinError 123] ファイル名、ディレクトリ名、またはボリューム ラベルの構文が間違っています。: "'E:\\\\pj\\\\xedge\\\\PJ_entry_and_exit_management\\\\02.dev_pgm\\\\eems'"
+"POST /webhook HTTP/1.1" 500 77414
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "eems_beacon_log" ("reply_token", "line_id", "timestamp", "hwid", "enter_or_leave") VALUES ('ce407e8fa4df45249f04ab2eae23a282', 'U6bca9d80ca9e97f27cfb3077dee3748f', '2019-02-23 06:10:29.525000', '0125ee1be6', 'enter'); args=['ce407e8fa4df45249f04ab2eae23a282', 'U6bca9d80ca9e97f27cfb3077dee3748f', '2019-02-23 06:10:29.525000', '0125ee1be6', 'enter']
+"POST /webhook HTTP/1.1" 200 0
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14839
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 14839
+"GET /static/images/favicon.png HTTP/1.1" 200 1503

@@ -8,6 +8,8 @@ import os
 import sys
 import datetime
 
+from django.utils import timezone
+
 sys.path.append(os.getcwd())
 
 from logging import getLogger, FileHandler, Formatter, DEBUG
@@ -80,7 +82,7 @@ def insert_request_log_tbl(request):
     dic_data = {
         "reply_token": reply_token,
         "line_id": user_id,
-        "timestamp": timestamp_date,
+        "timestamp": timezone.now(),
         "hwid": hwid,
         "enter_or_leave": enter_or_leave
     }

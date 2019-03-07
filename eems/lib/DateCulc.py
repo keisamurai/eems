@@ -4,6 +4,9 @@
 # ////////////////////////////////////////
 import datetime
 from dateutil.relativedelta import relativedelta
+import pytz
+
+from django.utils import timezone
 
 NUM_DAY = 3             # 受け取る引数の数
 NUM_DAY_LEN = 8         # 引数の文字列
@@ -245,8 +248,8 @@ def DateFromMilli(millisectime):
     """
     if type(millisectime) is not int:
         return False
-    return datetime.datetime.fromtimestamp(millisectime / 1000)
-
+    time = datetime.datetime.fromtimestamp(millisectime / 1000, tz=pytz.timezone('UTC'))
+    return time
 
 # for test
 if __name__ == "__main__":
