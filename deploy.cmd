@@ -96,6 +96,13 @@ IF EXIST "%DEPLOYMENT_TARGET%\manage.py" (
   %PYTHON% manage.py collectstatic --noinput --clear
 )
 
+:: 7. Django migrate
+:: 20190310 added
+IF EXIST "%DEPLOYMENT_TARGET%\manage.py" (
+  echo migrate Django migrations files.
+  %PYTHON% manage.py migrate
+)
+
 popd
 
 :postPython

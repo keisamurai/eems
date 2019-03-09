@@ -35,7 +35,7 @@ def assign_from_line_request(request):
     # --------------------
     if request.method == 'POST':
         for event in request_json['events']:
-            replytoken = event['replyToken']
+            reply_token = event['replyToken']
             message_type = event['type']
     else:
         return rtn

@@ -3656,3 +3656,18 @@ IndexError: list index out of range
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 55811
+"GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/bootstrap/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2085
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 200 5222
+"GET /static/bootstrap/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 82411
+"GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
