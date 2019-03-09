@@ -1501,3 +1501,24 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [
 (0.000) BEGIN; args=None
 (0.002) INSERT INTO "eems_beacon_log" ("reply_token", "line_id", "timestamp", "hwid", "enter_or_leave") VALUES ('ce407e8fa4df45249f04ab2eae23a282', 'U6bca9d80ca9e97f27cfb3077dee3748f', '2019-03-09 03:27:50.575540', '0125ee1be6', 'enter'); args=['ce407e8fa4df45249f04ab2eae23a282', 'U6bca9d80ca9e97f27cfb3077dee3748f', '2019-03-09 03:27:50.575540', '0125ee1be6', 'enter']
 "POST /webhook HTTP/1.1" 200 0
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'keisa'; args=('keisa',)
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'keisa'; args=('keisa',)
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'keisa'; args=('keisa',)
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'purupuru'; args=('purupuru',)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$100000$TGbBJTc9Bylx$GbRjJgZkcOjqMyLKdYHCPFnSEp2WT6rfD+TVEmgr0r0=', NULL, 1, 'purupuru', '', '', 'purupuru@gmail.com', 1, 1, '2019-03-09 06:41:22.645432'); args=['pbkdf2_sha256$100000$TGbBJTc9Bylx$GbRjJgZkcOjqMyLKdYHCPFnSEp2WT6rfD+TVEmgr0r0=', None, True, 'purupuru', '', '', 'purupuru@gmail.com', True, True, '2019-03-09 06:41:22.645432']
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
