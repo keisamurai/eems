@@ -55,16 +55,18 @@ class LogView(TemplateView):
 
 
 def webhook(request):
-    """Line Beaconのリクエストを受け取り、jsonファイルを生成する
+    """Line Beaconのリクエストを受け取り、処理を実行する
     ref URL:https://qiita.com/__init__/items/8ae8401e9f0ff281ae64
     Args:
         request : Lineからのrequest
     Returns:
-        : status = 200 を返却する
+        : status = 200/500
     """
+    # LineTools.request_log(request)   # for debuging
+    result = LineTools.assign_from_line_request(request)
 
-    LineTools.request_log(request)
-    LineTools.insert_request_log_tbl(request)
-
-    # ステータスコード 200を返却 (画面には何も表示しないのでなんでもいい)
-    return HttpResponse(status=200)
+    if result:
+        # ステータスコード 200を返却 (画面には何も表示しないのでなんでもいい)
+        return HttpResponse(status=200)
+    else:
+        return HttpResponse(status=500)

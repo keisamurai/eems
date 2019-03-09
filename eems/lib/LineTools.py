@@ -17,24 +17,107 @@ from eems.lib import DateCulc
 from eems.lib import DBConnect
 from eems.lib import Const
 
-# info
-REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/push'
 
-# # header
-# HEADER = {
-#     'Content-Type': 'application/json',
-#     'Authorization': 'Bearer' + ACCESSTOKEN
-# }
-
-
-def reply_text_beacon(reply_token, text):
+def assign_from_line_request(request):
     """
-    description : line beacon用の応答メソッド
-    args        : reply_token -> Lineに応答するためのトークンID
-                : text        -> Line応答用テキスト
+    description : line からのwebhookに対して、処理を振り分ける
+    args        : request -> lineからのrequest
     return      : True/False
     """
-    # bodyを作成
+    rtn = True
+
+    # --------------------
+    # データ取得(from request)
+    # --------------------
+    request_json = json.loads(request.body.decode('utf-8'))
+    # --------------------
+    # データ取得(from Json)
+    # --------------------
+    if request.method == 'POST':
+        for event in request_json['events']:
+            replytoken = event['replyToken']
+            message_type = event['type']
+    else:
+        return rtn
+
+    # --------------------
+    # データ取得(データタイプ判定)
+    # --------------------
+    # メッセージリクエスト
+    if message_type == 'message':
+        # line 接続確認時
+        if reply_token == Const.LINE_CONNECT_CHECK_REP_TOKEN:
+            return rtn
+        # line 通常メッセージリクエスト
+        else:
+            # 処理したいことがあれば書く...
+            return rtn
+
+    # Line Beaconからのリクエスト
+    if message_type == 'beacon':
+        # データ取得
+        for event in request_json['events']:
+            user_id = event['source']['userId']
+            timestamp = event['timestamp']
+            hwid = event['beacon']['hwid']
+            enter_or_leave = event['beacon']['type']
+
+        # データ生成
+        timestamp_date = DateCulc.DateFromMilli(timestamp)
+        dic_data = {
+            "reply_token": reply_token,
+            "line_id": user_id,
+            "timestamp": timezone.now(),
+            "hwid": hwid,
+            "enter_or_leave": enter_or_leave
+        }
+
+        # データ保存(DB)
+        insert_request_log_tbl(dic_data)
+
+        return rtn
+
+    # メッセージリクエスト、Beaconリクエスト以外
+    rtn = False
+    return rtn
+
+
+def insert_request_log_tbl(dic_data):
+    """
+    description : logテーブルにrequestの内容を挿入する
+    args        : dic_data -> Lineからのbeaconリクエストに準ずる辞書データ
+    return      : True/False
+    """
+    rtn = False
+
+    # db アクセス
+    if DBConnect.insert_info(Const.TBL_BEACON_LOG_NAME, dic_data):
+        rtn = True
+    else:
+        return trn
+
+    return rtn
+
+
+def reply_text(reply_token, text):
+    """
+    name        : reply_text
+    description : Lineアプリにテキストで返答する
+        reply_token (str): Lineアプリに返答するためのトークン
+        text (str): 返答メッセージ
+    return      : true/false
+    """
+    # --------------
+    # Header 生成
+    # --------------
+    HEADER = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + Const.LINE_CHANNEL_ACCESS_TOKEN
+    }
+
+    # --------------
+    # body 生成
+    # --------------
     body = {
         'replyToken': reply_token,
         'messages': [
@@ -45,54 +128,13 @@ def reply_text_beacon(reply_token, text):
         ]
     }
 
-    # リクエスト送信(POST)
-    requests.post(REPLY_ENDPOINT, headers=HEADER, data=json.dumps(body))
-    return 'Complete'
+    # 返答
+    try:
+        requests.post(Const.LINE_REPLY_ENDPOINT, headers=HEADER, data=json.dums(body))
+    except:
+        return False
 
-
-def insert_request_log_tbl(request):
-    """
-    description : logテーブルにrequestの内容を挿入する
-    args        : request -> Line サーバーからのPOSTデータ
-    return      : True/False
-    """
-    rtn = False
-    # --------------------
-    # データ取得(from request)
-    # --------------------
-    request_json = json.loads(request.body.decode('utf-8'))
-    # --------------------
-    # データ取得(from Json)
-    # --------------------
-    if request.method == 'POST':
-        for event in request_json['events']:
-            reply_token = event['replyToken']
-            message_type = event['type']
-            user_id = event['source']['userId']
-            timestamp = event['timestamp']
-            hwid = event['beacon']['hwid']
-            enter_or_leave = event['beacon']['type']
-    else:
-        return rtn
-
-    # --------------------
-    # データ挿入
-    # --------------------
-    timestamp_date = DateCulc.DateFromMilli(timestamp)
-    dic_data = {
-        "reply_token": reply_token,
-        "line_id": user_id,
-        "timestamp": timezone.now(),
-        "hwid": hwid,
-        "enter_or_leave": enter_or_leave
-    }
-    # db アクセス
-    if DBConnect.insert_info(Const.TBL_BEACON_LOG_NAME, dic_data):
-        rtn = True
-    else:
-        return trn
-
-    return rtn
+    return True
 
 
 def request_log(request):
