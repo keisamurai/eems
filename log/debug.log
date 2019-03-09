@@ -950,3 +950,17 @@ OSError: [WinError 123] ÉtÉ@ÉCÉãñºÅAÉfÉBÉåÉNÉgÉäñºÅAÇ‹ÇΩÇÕÉ{ÉäÉÖÅ[ÉÄ ÉâÉxÉãÇÃç\ï
 (0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
 "GET /log/ HTTP/1.1" 200 14839
 "GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.000) BEGIN; args=None
+(0.003) INSERT INTO "eems_beacon_log" ("reply_token", "line_id", "timestamp", "hwid", "enter_or_leave") VALUES ('ce407e8fa4df45249f04ab2eae23a282', 'U6bca9d80ca9e97f27cfb3077dee3748f', '2019-03-07 21:13:56.539572', '0125ee1be6', 'enter'); args=['ce407e8fa4df45249f04ab2eae23a282', 'U6bca9d80ca9e97f27cfb3077dee3748f', '2019-03-07 21:13:56.539572', '0125ee1be6', 'enter']
+"POST /webhook HTTP/1.1" 200 0
+(0.003) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 15389
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 10; args=()
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 10; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 11; args=()
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 9; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log"; args=()
+"GET /log/ HTTP/1.1" 200 15389
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
