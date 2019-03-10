@@ -127,7 +127,6 @@ def reply_text(text):
     # 返答
     try:
         line_bot_api.reply_message(
-            reply_token,
             TextMessage(text=text)
         )
     except:
