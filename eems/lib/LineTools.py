@@ -134,7 +134,7 @@ def reply_text(reply_token, text):
 
     # 返答
     try:
-        requests.post(Const.LINE_REPLY_ENDPOINT, headers=HEADER, data=json.dums(body))
+        requests.post(Const.LINE_REPLY_ENDPOINT, headers=HEADER, data=json.dumps(body))
     except:
         return False
 
