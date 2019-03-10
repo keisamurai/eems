@@ -11,6 +11,8 @@
 # name        : Core.py
 # description : 入退室管理システムのコアロジックを提供する
 # =================================================
+import sys
+
 sys.path.append(os.getcwd())
 
 from logging import getLogger, FileHandler, Formatter, DEBUG
