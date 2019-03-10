@@ -38,8 +38,8 @@ class Core:
         rtn = True
 
         # Line通知
+        text = "{0}".format(entry_or_leave)
         try:
-            text = "{0}".format(entry_or_leave)
             LineTools.reply_text(text, reply_token)
         except:
             rtn = False

@@ -20,8 +20,7 @@ from eems.lib import Core
 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, BeaconEvent, MessageAction, TemplateSendMessage, ButtonsTemplate
-from linebot.models import SourceUser
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, MessageAction, TemplateSendMessage, ButtonsTemplate
 
 # --------------------
 # LineBot設定
@@ -90,7 +89,7 @@ def assign_from_line_request(request):
         # データ保存(DB)
         insert_request_log_tbl(dic_data)
         core = Core.Core()
-        text = core.simple_process(enter_or_leave, reply_token)
+        core.simple_process(enter_or_leave, reply_token)
         return rtn
 
     # メッセージリクエスト、Beaconリクエスト以外
@@ -125,10 +124,8 @@ def reply_text(text, reply_token):
     # 返答
     try:
         line_bot_api.reply_message(
-            TextMessage(
-                reply_token,
-                text=text
-            )
+            reply_token,
+            TextSendMessage(text=text)
         )
     except:
         return False
