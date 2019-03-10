@@ -92,7 +92,7 @@ def assign_from_line_request(request):
         core = Core.Core()
         text = core.simple_process(enter_or_leave)
         # line 返答
-        reply_text(reply_token, text)
+        reply_text(text)
         return rtn
 
     # メッセージリクエスト、Beaconリクエスト以外
