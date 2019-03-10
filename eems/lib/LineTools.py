@@ -99,7 +99,7 @@ def assign_from_line_request(request):
 
 def insert_request_log_tbl(dic_data):
     """
-    description : logテーブルにrequestの内容を挿入する
+    description : Beacon_Logテーブルにrequestの内容を挿入する
     args        : dic_data -> Lineからのbeaconリクエストに準ずる辞書データ
     return      : True/False
     """

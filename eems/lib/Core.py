@@ -36,8 +36,20 @@ class Core:
         return      : true / false
         """
         rtn = True
+        # ---------------------
+        # 入退室処理
+        # ---------------------
+        if entry_or_leave == Const.LINE_ENTRY:
+            # db にデータを挿入
+            pass
 
+        if entry_or_leave == Const.LINE_LEAVE:
+            # db からデータを削除
+            pass
+
+        # ---------------------
         # Line通知
+        # ---------------------
         text = "{0}".format(entry_or_leave)
         try:
             LineTools.reply_text(text, reply_token)

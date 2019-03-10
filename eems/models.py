@@ -21,13 +21,14 @@ class User_Master(models.Model):
     department = models.CharField(max_length=128)
     # 入室回数
     num_entry = models.IntegerField(default=0)
+    # ユーザーの写真のURL
+    user_img = models.URLField(max_length=250)
 
 
 class Current_Entry(models.Model):
     """
     description: 現在入室しているユーザーのデータ
     """
-    # user_id
     user = models.ForeignKey(User_Master, on_delete=models.PROTECT)
 
 
