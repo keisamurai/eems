@@ -128,7 +128,6 @@ def insert_request_log_tbl(dic_data):
 
 def reply_text(text):
     """
-    name        : reply_text
     description : Lineアプリにテキストで返答する
         reply_token (str): Lineアプリに返答するためのトークン
         text (str): 返答メッセージ
