@@ -38,13 +38,13 @@ class Core:
         rtn = True
 
         # Line通知
-        if ee_type == Const.LINE_ENTRY:
-            text = "{0}[time:{1}]".format(ee_type, timestamp)
+        try:
+            text = "{0}[time:{1}]".format(entry_or_leave, timestamp)
             LineTools.reply_text(text)
-            return rtn
+        except:
+            rtn = False
 
-        # 入退室以外のタイプ
-        return False
+        return rtn
 
     def exit_process(self):
         """
