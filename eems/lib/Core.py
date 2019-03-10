@@ -12,6 +12,7 @@
 # description : 入退室管理システムのコアロジックを提供する
 # =================================================
 import sys
+import os
 
 sys.path.append(os.getcwd())
 
