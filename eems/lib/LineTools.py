@@ -18,6 +18,19 @@ from eems.lib import DBConnect
 from eems.lib import Const
 from eems.lib import Core
 
+from linebot import LineBotApi, WebhookHandler
+from linebot.exceptions import InvalidSignatureError
+from linebot.models import MessageEvent, TextMessage, BeaconEvent, MessageAction, TemplateSendMessage, ButtonsTemplate
+from linebot.models import SourceUser
+
+# --------------------
+# LineBot設定
+# --------------------
+# https://qiita.com/kotamatsuoka/items/472b455e5f9a6315d499
+# line-bot-sdk-python: https://github.com/line/line-bot-sdk-python/blob/master/examples/flask-echo/app.py
+line_bot_api = LineBotApi(Const.LINE_CHANNEL_ACCESS_TOKEN)
+handler = WebhookHandler(Const.LINE_CHANNEL_SECRET)
+
 
 def assign_from_line_request(request):
     """
@@ -30,7 +43,17 @@ def assign_from_line_request(request):
     # --------------------
     # データ取得(from request)
     # --------------------
+    # get X-Line-Signature header value
+    signature = request.headers['X-Line-Signature']
+    # get request body as text
     request_json = json.loads(request.body.decode('utf-8'))
+
+    try:
+        # 署名の検証
+        handler.handle(body, signature)
+    except InvalidSignatureError:
+        rtn = False
+        return rtn
     # --------------------
     # データ取得(from Json)
     # --------------------
@@ -111,30 +134,12 @@ def reply_text(reply_token, text):
         text (str): 返答メッセージ
     return      : true/false
     """
-    # --------------
-    # Header 生成
-    # --------------
-    HEADER = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + Const.LINE_CHANNEL_ACCESS_TOKEN
-    }
-
-    # --------------
-    # body 生成
-    # --------------
-    body = {
-        'replyToken': reply_token,
-        'messages': [
-            {
-                'type': 'text',
-                'text': text
-            }
-        ]
-    }
-
     # 返答
     try:
-        requests.post(Const.LINE_REPLY_ENDPOINT, headers=HEADER, data=json.dumps(body))
+        line_bot_api.reply_message(
+            reply_token,
+            TextMessage(text=text)
+        )
     except:
         return False
 
