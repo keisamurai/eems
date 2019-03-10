@@ -90,9 +90,7 @@ def assign_from_line_request(request):
         # データ保存(DB)
         insert_request_log_tbl(dic_data)
         core = Core.Core()
-        text = core.simple_process(enter_or_leave)
-        # line 返答
-        reply_text(text)
+        text = core.simple_process(enter_or_leave, reply_token)
         return rtn
 
     # メッセージリクエスト、Beaconリクエスト以外
@@ -117,7 +115,7 @@ def insert_request_log_tbl(dic_data):
     return rtn
 
 
-def reply_text(text):
+def reply_text(text, reply_token):
     """
     description : Lineアプリにテキストで返答する
         reply_token (str): Lineアプリに返答するためのトークン
@@ -127,7 +125,10 @@ def reply_text(text):
     # 返答
     try:
         line_bot_api.reply_message(
-            TextMessage(text=text)
+            TextMessage(
+                reply_token,
+                text=text
+            )
         )
     except:
         return False

@@ -28,11 +28,11 @@ class Core:
         """コンストラクタ"""
         pass
 
-    def simple_process(self, entry_or_leave):
+    def simple_process(self, entry_or_leave, reply_token):
         """
         description : 入退室のタイプを受け取り、タイプに合わせて動作する
         args        : entry_or_leave : entry or leave
-                    : timestamp      : データを受け取った時点のタイムスタンプ
+                    : reply_token      : リプライ
         return      : true / false
         """
         rtn = True
@@ -40,7 +40,7 @@ class Core:
         # Line通知
         try:
             text = "{0}".format(entry_or_leave)
-            LineTools.reply_text(text)
+            LineTools.reply_text(text, reply_token)
         except:
             rtn = False
 
