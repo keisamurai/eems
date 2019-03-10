@@ -25,10 +25,11 @@ class Core:
         """コンストラクタ"""
         pass
 
-    def simple_process(ee_type, timestamp):
+    def simple_process(self, entry_or_leave, timestamp):
         """
         description : 入退室のタイプを受け取り、タイプに合わせて動作する
-        args        : ee_type : entry or leave
+        args        : entry_or_leave : entry or leave
+                    : timestamp      : データを受け取った時点のタイムスタンプ
         return      : true / false
         """
         rtn = True
@@ -42,7 +43,7 @@ class Core:
         # 入退室以外のタイプ
         return False
 
-    def exit_process():
+    def exit_process(self):
         """
         description :
         args        :
