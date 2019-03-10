@@ -43,17 +43,8 @@ def assign_from_line_request(request):
     # --------------------
     # データ取得(from request)
     # --------------------
-    # get X-Line-Signature header value
-    signature = request.headers['X-Line-Signature']
     # get request body as text
     request_json = json.loads(request.body.decode('utf-8'))
-
-    try:
-        # 署名の検証
-        handler.handle(body, signature)
-    except InvalidSignatureError:
-        rtn = False
-        return rtn
     # --------------------
     # データ取得(from Json)
     # --------------------
