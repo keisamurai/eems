@@ -20,17 +20,15 @@ class User_Master(models.Model):
     # 所属名
     department = models.CharField(max_length=128)
     # 入室回数
-    num_entry = models.PositiveIntegerField()
+    num_entry = models.IntegerField(default=0)
 
 
-class Current_Engry(models.Model):
+class Current_Entry(models.Model):
     """
     description: 現在入室しているユーザーのデータ
     """
     # user_id
-    user_id = models.ForeignKey(User_Master.user_id, on_delete=models.PROTECT)
-    # user_name
-    line_name = models.ForeignKey(User_Master.line_name, on_delete=models.PROTECT)
+    user = models.ForeignKey(User_Master, on_delete=models.PROTECT)
 
 
 class Beacon_Log(models.Model):

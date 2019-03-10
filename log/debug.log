@@ -3701,3 +3701,85 @@ IndexError: list index out of range
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT); (params None)
+(0.003) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT); args=None
+ALTER TABLE "eems_user_master" RENAME TO "eems_user_master__old"; (params ())
+(0.000) ALTER TABLE "eems_user_master" RENAME TO "eems_user_master__old"; args=()
+CREATE TABLE "eems_user_master" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" varchar(4) NOT NULL, "line_id" varchar(33) NOT NULL, "user_name" varchar(128) NOT NULL, "line_name" varchar(128) NOT NULL, "company" varchar(128) NOT NULL, "department" varchar(128) NOT NULL, "num_entry" integer NOT NULL); (params None)
+(0.000) CREATE TABLE "eems_user_master" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" varchar(4) NOT NULL, "line_id" varchar(33) NOT NULL, "user_name" varchar(128) NOT NULL, "line_name" varchar(128) NOT NULL, "company" varchar(128) NOT NULL, "department" varchar(128) NOT NULL, "num_entry" integer NOT NULL); args=None
+INSERT INTO "eems_user_master" ("id", "user_id", "line_id", "user_name", "line_name", "company", "department", "num_entry") SELECT "id", "user_id", "line_id", "user_name", "line_name", "company", "department", 0 FROM "eems_user_master__old"; (params ())
+(0.000) INSERT INTO "eems_user_master" ("id", "user_id", "line_id", "user_name", "line_name", "company", "department", "num_entry") SELECT "id", "user_id", "line_id", "user_name", "line_name", "company", "department", 0 FROM "eems_user_master__old"; args=()
+DROP TABLE "eems_user_master__old"; (params ())
+(0.000) DROP TABLE "eems_user_master__old"; args=()
+ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; (params ())
+(0.000) ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; args=()
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "eems_user_master" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+(0.000) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "eems_user_master" ("id") DEFERRABLE INITIALLY DEFERRED); args=None
+INSERT INTO "eems_current_entry" ("id", "user_id") SELECT "id", NULL FROM "eems_current_entry__old"; (params ())
+(0.000) INSERT INTO "eems_current_entry" ("id", "user_id") SELECT "id", NULL FROM "eems_current_entry__old"; args=()
+DROP TABLE "eems_current_entry__old"; (params ())
+(0.000) DROP TABLE "eems_current_entry__old"; args=()
+CREATE INDEX "eems_current_entry_user_id_1f272a15" ON "eems_current_entry" ("user_id"); (params ())
+(0.000) CREATE INDEX "eems_current_entry_user_id_1f272a15" ON "eems_current_entry" ("user_id"); args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('eems', '0003_auto_20190310_1049', '2019-03-10 01:51:17.172506'); args=['eems', '0003_auto_20190310_1049', '2019-03-10 01:51:17.172506']
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'user_master'); args=('eems', 'user_master')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'beacon_log'); args=('eems', 'beacon_log')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'current_entry'); args=('eems', 'current_entry')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'current_entry'); args=('eems', 'current_entry')
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('eems', 'current_entry'); args=['eems', 'current_entry']
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 7)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add current_ entry', 9, 'add_current_entry' UNION ALL SELECT 'Can change current_ entry', 9, 'change_current_entry' UNION ALL SELECT 'Can delete current_ entry', 9, 'delete_current_entry'; args=('Can add current_ entry', 9, 'add_current_entry', 'Can change current_ entry', 9, 'change_current_entry', 'Can delete current_ entry', 9, 'delete_current_entry')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'eems'; args=('eems',)
