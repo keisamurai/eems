@@ -75,7 +75,7 @@ def assign_from_line_request(request):
 
         # データ保存(DB)
         insert_request_log_tbl(dic_data)
-        core = Core()
+        core = Core.Core()
         text = core.simple_process(enter_or_leave, timestamp)
         # line 返答
         reply_text(reply_token, text)
