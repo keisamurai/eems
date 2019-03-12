@@ -4477,3 +4477,793 @@ AttributeError: type object 'Current_Entry' has no attribute 'object'
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 55811
+"GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/fontawesome-free/scss/fontawesome.scss HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/bootstrap/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 200 5222
+"GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2085
+"GET /static/bootstrap/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 82411
+"GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 304 0
+"GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET / HTTP/1.1" 200 55811
+(0.006) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+"GET / HTTP/1.1" 200 56177
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+"GET / HTTP/1.1" 200 56183
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.003) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+"GET / HTTP/1.1" 200 56182
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+"GET / HTTP/1.1" 200 56201
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.003) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" LIMIT 1; args=()
+"GET / HTTP/1.1" 200 56200
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 56218
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 56218
+(0.005) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:31:14.425452'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:31:14.425452')
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000019AFB688400>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000019AFB76D828>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000019AFB6CD0B8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000019AFB688400>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000019AFB76D828>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000019AFB6CD0B8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+(0.002) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 2 ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=(2,)
+"GET /admin/ HTTP/1.1" 200 5949
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:31:16.877173'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:31:16.877173')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000019AFB686EA0>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000019AFB78FC50>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000019AFB6DAAC8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000019AFB686EA0>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0000019AFB78FC50>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000019AFB6DAAC8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+(0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 2 ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=(2,)
+"GET /admin/ HTTP/1.1" 200 5949
+(0.005) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:31:25.229200'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:31:25.229200')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) BEGIN; args=None
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'current_entry'); args=('eems', 'current_entry')
+"GET /admin/eems/current_entry/add/ HTTP/1.1" 200 7111
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:31:25.512171'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:31:25.512171')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:32:10.265813'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:32:10.265813')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.001) BEGIN; args=None
+(0.003) INSERT INTO "eems_current_entry" ("line_id", "line_name", "user_img", "entry_time", "leave_time") VALUES ('xxx-xxx-xx2', 'xxx-xxx-xx2', 'https://source.unsplash.com/QAB-WJcbgJk/60x60', '2019-03-12 11:31:25', '2019-03-12 11:31:25'); args=['xxx-xxx-xx2', 'xxx-xxx-xx2', 'https://source.unsplash.com/QAB-WJcbgJk/60x60', '2019-03-12 11:31:25', '2019-03-12 11:31:25']
+(0.001) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2019-03-12 11:32:10.490811', 2, 9, '2', 'Current_Entry object (2)', 1, '[{"added": {}}]'); args=['2019-03-12 11:32:10.490811', 2, 9, '2', 'Current_Entry object (2)', 1, '[{"added": {}}]']
+"POST /admin/eems/current_entry/add/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:32:10.544811'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:32:10.544811')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) BEGIN; args=None
+"GET /admin/eems/current_entry/add/ HTTP/1.1" 200 7378
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:32:10.659809'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:32:10.659809')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:36:00.691535'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:36:00.691535')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) BEGIN; args=None
+(0.003) INSERT INTO "eems_current_entry" ("line_id", "line_name", "user_img", "entry_time", "leave_time") VALUES ('xxx-xxx-xx3', 'xxx-xxx-xx3', 'https://images-na.ssl-images-amazon.com/images/I/51oqLgOsLFL.jpg', '2019-03-12 11:32:10', '2019-03-12 11:32:10'); args=['xxx-xxx-xx3', 'xxx-xxx-xx3', 'https://images-na.ssl-images-amazon.com/images/I/51oqLgOsLFL.jpg', '2019-03-12 11:32:10', '2019-03-12 11:32:10']
+(0.000) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2019-03-12 11:36:00.709532', 2, 9, '3', 'Current_Entry object (3)', 1, '[{"added": {}}]'); args=['2019-03-12 11:36:00.709532', 2, 9, '3', 'Current_Entry object (3)', 1, '[{"added": {}}]']
+"POST /admin/eems/current_entry/add/ HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:36:00.772529'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:36:00.772529')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) BEGIN; args=None
+"GET /admin/eems/current_entry/add/ HTTP/1.1" 200 7378
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:36:00.903546'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:36:00.903546')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:37:00.500041'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:37:00.500041')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) BEGIN; args=None
+(0.002) INSERT INTO "eems_current_entry" ("line_id", "line_name", "user_img", "entry_time", "leave_time") VALUES ('xxx-xxx-xx4', 'xxx-xxx-xx4', 'http://img05.shop-pro.jp/PA01018/304/product/83235847.jpg?20141109171614', '2019-03-12 11:36:00', '2019-03-12 11:36:00'); args=['xxx-xxx-xx4', 'xxx-xxx-xx4', 'http://img05.shop-pro.jp/PA01018/304/product/83235847.jpg?20141109171614', '2019-03-12 11:36:00', '2019-03-12 11:36:00']
+(0.001) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2019-03-12 11:37:00.524036', 2, 9, '4', 'Current_Entry object (4)', 1, '[{"added": {}}]'); args=['2019-03-12 11:37:00.524036', 2, 9, '4', 'Current_Entry object (4)', 1, '[{"added": {}}]']
+"POST /admin/eems/current_entry/add/ HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:37:00.566038'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:37:00.566038')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.001) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" ORDER BY "eems_current_entry"."id" DESC; args=()
+Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000019AFB7B8F28>>}]
+Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+"GET /admin/eems/current_entry/ HTTP/1.1" 200 5520
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:37:00.755038'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:37:00.755038')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57068
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57068
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57072
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.004) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57100
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57088
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57100
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57088
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57088
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:41:54.644623'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:41:54.644623')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.001) BEGIN; args=None
+"GET /admin/eems/current_entry/add/ HTTP/1.1" 200 7111
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:41:54.813610'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:41:54.813610')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:43:31.978351'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:43:31.978351')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "eems_current_entry" ("line_id", "line_name", "user_img", "entry_time", "leave_time") VALUES ('xxx-xxx-xx5', 'xxx-xxx-xx5', 'https://img.fril.jp/img/179389314/l/512525132.jpg?1541147394', '2019-03-12 11:41:54', '2019-03-12 11:41:54'); args=['xxx-xxx-xx5', 'xxx-xxx-xx5', 'https://img.fril.jp/img/179389314/l/512525132.jpg?1541147394', '2019-03-12 11:41:54', '2019-03-12 11:41:54']
+(0.001) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2019-03-12 11:43:31.993348', 2, 9, '5', 'Current_Entry object (5)', 1, '[{"added": {}}]'); args=['2019-03-12 11:43:31.993348', 2, 9, '5', 'Current_Entry object (5)', 1, '[{"added": {}}]']
+"POST /admin/eems/current_entry/add/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:43:32.061354'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:43:32.061354')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" ORDER BY "eems_current_entry"."id" DESC; args=()
+Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000019AFB7F0840>>}]
+Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+"GET /admin/eems/current_entry/ HTTP/1.1" 200 5764
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 11:43:32.213353'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 11:43:32.213353')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57376
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57292
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57287
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57035
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57040
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57042
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57045
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57049
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57040
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57047
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57047
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57043
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57047
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57054
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57047
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\python\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern ''>], [<URLPattern 'log/'>], [<URLPattern 'webhook' [name='webhook']>]], 'path': 'buttons.html'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /buttons.html
+"GET /buttons.html HTTP/1.1" 404 2302
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57047
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 56977
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57833
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57825
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 57825
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 58942
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.003) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 58721
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 58715
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 58720
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 58716
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.004) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 59171
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 59171
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 58807
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 59131
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 59131
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 58719
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 59296
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.001) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 59277
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
+(0.002) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry"; args=()
+"GET / HTTP/1.1" 200 59108
+"GET /static/images/favicon.png HTTP/1.1" 200 1503
