@@ -11,6 +11,7 @@ EEMS_PJ_ROOT = os.environ['EEMS_PJ_ROOT']  # pj root : D:\home\site\wwwroot\ (on
 
 # DB-related
 TBL_USER_MASTER_NAME = 'User_Master'
+TBL_CURRENT_ENTRY_NAME = 'Current_Entry'
 TBL_BEACON_LOG_NAME = 'Beacon_Log'
 
 # Line-related

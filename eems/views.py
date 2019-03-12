@@ -15,24 +15,20 @@ class IndexView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+        # ------------------
+        # set current room info
+        # ------------------
+        current_entry = Current_Entry.objects.all()
+        context['current_entry'] = current_entry
 
+        # ------------------
+        # set beacon log
+        # ------------------
         with open('log/request.log') as log_file:
             log_txt = log_file.read()
-        # リクエスト空チェック
-        # if(request_json != null):
-        #     for event in request_json['events']:
-        #         replytoken = event['replyToken']
-        #         message_type = event['type']
-        #         user_id = event['source']['userId']
-        #         timestamp = event['timestamp']
-        #         beacon_hwid = event['beacon']['hwid']
-        #         beacon_type = event['beacon']['type']
 
-        # --------------------
-        # context　定義
-        # --------------------
-        # context['replytoken'] = replytoken
         context['log_txt'] = log_txt
+
         return render(self.request, self.template_name, context)
 
 

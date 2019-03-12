@@ -3783,3 +3783,697 @@ CREATE INDEX "eems_current_entry_user_id_1f272a15" ON "eems_current_entry" ("use
 (0.000) BEGIN; args=None
 (0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add current_ entry', 9, 'add_current_entry' UNION ALL SELECT 'Can change current_ entry', 9, 'change_current_entry' UNION ALL SELECT 'Can delete current_ entry', 9, 'delete_current_entry'; args=('Can add current_ entry', 9, 'add_current_entry', 'Can change current_ entry', 9, 'change_current_entry', 'Can delete current_ entry', 9, 'delete_current_entry')
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'eems'; args=('eems',)
+(0.004) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "eems_user_master" RENAME TO "eems_user_master__old"; (params ())
+(0.001) ALTER TABLE "eems_user_master" RENAME TO "eems_user_master__old"; args=()
+CREATE TABLE "eems_user_master" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" varchar(4) NOT NULL, "line_id" varchar(33) NOT NULL, "user_name" varchar(128) NOT NULL, "line_name" varchar(128) NOT NULL, "company" varchar(128) NOT NULL, "department" varchar(128) NOT NULL, "num_entry" integer NOT NULL, "user_img" varchar(250) NOT NULL); (params None)
+(0.000) CREATE TABLE "eems_user_master" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" varchar(4) NOT NULL, "line_id" varchar(33) NOT NULL, "user_name" varchar(128) NOT NULL, "line_name" varchar(128) NOT NULL, "company" varchar(128) NOT NULL, "department" varchar(128) NOT NULL, "num_entry" integer NOT NULL, "user_img" varchar(250) NOT NULL); args=None
+INSERT INTO "eems_user_master" ("id", "user_id", "line_id", "user_name", "line_name", "company", "department", "num_entry", "user_img") SELECT "id", "user_id", "line_id", "user_name", "line_name", "company", "department", "num_entry", '' FROM "eems_user_master__old"; (params ())
+(0.000) INSERT INTO "eems_user_master" ("id", "user_id", "line_id", "user_name", "line_name", "company", "department", "num_entry", "user_img") SELECT "id", "user_id", "line_id", "user_name", "line_name", "company", "department", "num_entry", '' FROM "eems_user_master__old"; args=()
+DROP TABLE "eems_user_master__old"; (params ())
+(0.000) DROP TABLE "eems_user_master__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('eems', '0004_user_master_user_img', '2019-03-11 13:02:04.804230'); args=['eems', '0004_user_master_user_img', '2019-03-11 13:02:04.804230']
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'user_master'); args=('eems', 'user_master')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'beacon_log'); args=('eems', 'beacon_log')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'current_entry'); args=('eems', 'current_entry')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 7)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'eems'; args=('eems',)
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.004) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) PRAGMA foreign_keys = OFF; args=None
+(0.000) BEGIN; args=None
+ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; (params ())
+(0.004) ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; args=()
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT); (params None)
+(0.000) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT); args=None
+INSERT INTO "eems_current_entry" ("id") SELECT "id" FROM "eems_current_entry__old"; (params ())
+(0.000) INSERT INTO "eems_current_entry" ("id") SELECT "id" FROM "eems_current_entry__old"; args=()
+DROP TABLE "eems_current_entry__old"; (params ())
+(0.000) DROP TABLE "eems_current_entry__old"; args=()
+ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; (params ())
+(0.001) ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; args=()
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL); args=None
+INSERT INTO "eems_current_entry" ("id", "entry_time") SELECT "id", '2019-03-11 14:14:35.616857' FROM "eems_current_entry__old"; (params ())
+(0.000) INSERT INTO "eems_current_entry" ("id", "entry_time") SELECT "id", '2019-03-11 14:14:35.616857' FROM "eems_current_entry__old"; args=()
+DROP TABLE "eems_current_entry__old"; (params ())
+(0.000) DROP TABLE "eems_current_entry__old"; args=()
+ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; (params ())
+(0.000) ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; args=()
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL); args=None
+INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time") SELECT "id", "entry_time", '2019-03-11 14:14:35.623856' FROM "eems_current_entry__old"; (params ())
+(0.000) INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time") SELECT "id", "entry_time", '2019-03-11 14:14:35.623856' FROM "eems_current_entry__old"; args=()
+DROP TABLE "eems_current_entry__old"; (params ())
+(0.000) DROP TABLE "eems_current_entry__old"; args=()
+ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; (params ())
+(0.000) ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; args=()
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL, "line_id" varchar(33) NOT NULL); (params None)
+(0.000) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL, "line_id" varchar(33) NOT NULL); args=None
+INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time", "line_id") SELECT "id", "entry_time", "leave_time", '' FROM "eems_current_entry__old"; (params ())
+(0.000) INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time", "line_id") SELECT "id", "entry_time", "leave_time", '' FROM "eems_current_entry__old"; args=()
+DROP TABLE "eems_current_entry__old"; (params ())
+(0.000) DROP TABLE "eems_current_entry__old"; args=()
+ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; (params ())
+(0.000) ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; args=()
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL, "line_id" varchar(33) NOT NULL, "line_name" varchar(128) NOT NULL); (params None)
+(0.000) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL, "line_id" varchar(33) NOT NULL, "line_name" varchar(128) NOT NULL); args=None
+INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time", "line_id", "line_name") SELECT "id", "entry_time", "leave_time", "line_id", '' FROM "eems_current_entry__old"; (params ())
+(0.000) INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time", "line_id", "line_name") SELECT "id", "entry_time", "leave_time", "line_id", '' FROM "eems_current_entry__old"; args=()
+DROP TABLE "eems_current_entry__old"; (params ())
+(0.000) DROP TABLE "eems_current_entry__old"; args=()
+ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; (params ())
+(0.000) ALTER TABLE "eems_current_entry" RENAME TO "eems_current_entry__old"; args=()
+CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL, "line_id" varchar(33) NOT NULL, "line_name" varchar(128) NOT NULL, "user_img" varchar(250) NOT NULL); (params None)
+(0.000) CREATE TABLE "eems_current_entry" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "entry_time" datetime NOT NULL, "leave_time" datetime NOT NULL, "line_id" varchar(33) NOT NULL, "line_name" varchar(128) NOT NULL, "user_img" varchar(250) NOT NULL); args=None
+INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time", "line_id", "line_name", "user_img") SELECT "id", "entry_time", "leave_time", "line_id", "line_name", '' FROM "eems_current_entry__old"; (params ())
+(0.001) INSERT INTO "eems_current_entry" ("id", "entry_time", "leave_time", "line_id", "line_name", "user_img") SELECT "id", "entry_time", "leave_time", "line_id", "line_name", '' FROM "eems_current_entry__old"; args=()
+DROP TABLE "eems_current_entry__old"; (params ())
+(0.000) DROP TABLE "eems_current_entry__old"; args=()
+(0.000) PRAGMA foreign_keys = ON; args=None
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) BEGIN; args=None
+(0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('eems', '0005_auto_20190311_2314', '2019-03-11 14:14:35.684856'); args=['eems', '0005_auto_20190311_2314', '2019-03-11 14:14:35.684856']
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry'); args=('admin', 'logentry')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission'); args=('auth', 'permission')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group'); args=('auth', 'group')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user'); args=('auth', 'user')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype'); args=('contenttypes', 'contenttype')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session'); args=('sessions', 'session')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'user_master'); args=('eems', 'user_master')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'beacon_log'); args=('eems', 'beacon_log')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'current_entry'); args=('eems', 'current_entry')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8, 9, 7)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'eems'; args=('eems',)
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 21; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 7; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 7; args=()
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" LIMIT 1 OFFSET 7; args=()
+(0.002) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df45249f04ab2eae23a282' LIMIT 21; args=('ce407e8fa4df45249f04ab2eae23a282',)
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df4' LIMIT 21; args=('ce407e8fa4df4',)
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df4' LIMIT 21; args=('ce407e8fa4df4',)
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df4' LIMIT 21; args=('ce407e8fa4df4',)
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df4' LIMIT 21; args=('ce407e8fa4df4',)
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df4' LIMIT 21; args=('ce407e8fa4df4',)
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df4' LIMIT 1; args=('ce407e8fa4df4',)
+(0.000) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df45249f04ab2eae23a282' LIMIT 21; args=('ce407e8fa4df45249f04ab2eae23a282',)
+(0.001) SELECT "eems_beacon_log"."id", "eems_beacon_log"."reply_token", "eems_beacon_log"."line_id", "eems_beacon_log"."timestamp", "eems_beacon_log"."hwid", "eems_beacon_log"."enter_or_leave" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df45249f04ab2eae23a282' LIMIT 21; args=('ce407e8fa4df45249f04ab2eae23a282',)
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df45249f04ab2eae23a282'; args=('ce407e8fa4df45249f04ab2eae23a282',)
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df45249f04ab2eae23a282'; args=('ce407e8fa4df45249f04ab2eae23a282',)
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8fa4df45249f04ab2eae23a282'; args=('ce407e8fa4df45249f04ab2eae23a282',)
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_beacon_log" WHERE "eems_beacon_log"."reply_token" = 'ce407e8f'; args=('ce407e8f',)
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 21, in get
+    current_entry = Current_Entry.object.all()
+AttributeError: type object 'Current_Entry' has no attribute 'object'
+(0.005) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:53:20.114665'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:53:20.114665')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET / HTTP/1.1" 500 78044
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\python\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern ''>], [<URLPattern 'log/'>], [<URLPattern 'webhook' [name='webhook']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2299
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 21, in get
+    current_entry = Current_Entry.object.all()
+AttributeError: type object 'Current_Entry' has no attribute 'object'
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:53:57.171498'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:53:57.171498')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET / HTTP/1.1" 500 78045
+"GET /admin HTTP/1.1" 301 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:54:09.293614'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:54:09.293614')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000001D104CFB9D8>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D104CE8A20>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D104D4A2E8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000001D104CFB9D8>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D104CE8A20>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D104D4A2E8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+(0.002) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 2 ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=(2,)
+"GET /admin/ HTTP/1.1" 200 5633
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:54:10.832615'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:54:10.832615')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000001D104CFB6A8>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D104D4CE10>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D104D3BDA0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000001D104CFB6A8>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: purupuru>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001D104D4CE10>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001D104D3BDA0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'title': 'サイト管理', 'app_list': [{'name': 'Eems', 'app_label': 'eems', 'app_url': '/admin/eems/', 'has_module_perms': True, 'models': [{'name': 'Beacon_ logs', 'object_name': 'Beacon_Log', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/beacon_log/', 'add_url': '/admin/eems/beacon_log/add/'}, {'name': 'Current_ entrys', 'object_name': 'Current_Entry', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/current_entry/', 'add_url': '/admin/eems/current_entry/add/'}, {'name': 'User_ masters', 'object_name': 'User_Master', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/eems/user_master/', 'add_url': '/admin/eems/user_master/add/'}]}, {'name': '認証と認可', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'グループ', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'ユーザー', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}], 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}]
+(0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ("django_admin_log"."user_id" = "auth_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 2 ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=(2,)
+"GET /admin/ HTTP/1.1" 200 5633
+"GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:54:21.263552'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:54:21.263552')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.007) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" ORDER BY "eems_current_entry"."id" DESC; args=()
+Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000001D104CFB6A8>>}]
+Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+"GET /admin/eems/current_entry/ HTTP/1.1" 200 3354
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:54:21.658548'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:54:21.658548')
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+"GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+"GET /static/admin/js/core.js HTTP/1.1" 200 7134
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:54:23.956421'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:54:23.956421')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.001) BEGIN; args=None
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'eems' AND "django_content_type"."model" = 'current_entry'); args=('eems', 'current_entry')
+"GET /admin/eems/current_entry/add/ HTTP/1.1" 200 7111
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:54:24.248421'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:54:24.248421')
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20283
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:56:01.208575'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:56:01.208575')
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) BEGIN; args=None
+(0.002) INSERT INTO "eems_current_entry" ("line_id", "line_name", "user_img", "entry_time", "leave_time") VALUES ('xxxxxxxxx', 'xxx-xxx-xxx', 'https://profile.line-scdn.net/0hzrDp8f3YJV15CQ-_abRaCkVMKzAOJyMVAW06M1wOe20DOmcIQjw5aVgBK24EPGAOFjg4Pg4IKD1d', '2019-03-12 10:54:24', '2019-03-12 10:54:24'); args=['xxxxxxxxx', 'xxx-xxx-xxx', 'https://profile.line-scdn.net/0hzrDp8f3YJV15CQ-_abRaCkVMKzAOJyMVAW06M1wOe20DOmcIQjw5aVgBK24EPGAOFjg4Pg4IKD1d', '2019-03-12 10:54:24', '2019-03-12 10:54:24']
+(0.001) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2019-03-12 10:56:01.435555', 2, 9, '1', 'Current_Entry object (1)', 1, '[{"added": {}}]'); args=['2019-03-12 10:56:01.435555', 2, 9, '1', 'Current_Entry object (1)', 1, '[{"added": {}}]']
+"POST /admin/eems/current_entry/add/ HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:56:01.474558'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:56:01.474558')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT COUNT(*) AS "__count" FROM "eems_current_entry"; args=()
+(0.000) SELECT "eems_current_entry"."id", "eems_current_entry"."line_id", "eems_current_entry"."line_name", "eems_current_entry"."user_img", "eems_current_entry"."entry_time", "eems_current_entry"."leave_time" FROM "eems_current_entry" ORDER BY "eems_current_entry"."id" DESC; args=()
+Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\python\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000001D104DFDD90>>}]
+Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+"GET /admin/eems/current_entry/ HTTP/1.1" 200 4787
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:56:01.584557'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:56:01.584557')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /admin/jsi18n/ HTTP/1.1" 200 8714
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 21, in get
+    current_entry = Current_Entry.object.all()
+AttributeError: type object 'Current_Entry' has no attribute 'object'
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:56:06.938411'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:56:06.938411')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET / HTTP/1.1" 500 78045
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\python\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\pj\xedge\PJ_entry_and_exit_management\02.dev_pgm\eems\eems\views.py", line 21, in get
+    current_entry = Current_Entry.object.all()
+AttributeError: type object 'Current_Entry' has no attribute 'object'
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '1ttosivudw6mgq954gwhxhik4l4cqzvy' AND "django_session"."expire_date" > '2019-03-12 10:57:34.296477'); args=('1ttosivudw6mgq954gwhxhik4l4cqzvy', '2019-03-12 10:57:34.296477')
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET / HTTP/1.1" 500 78180
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()

@@ -16,8 +16,6 @@ import os
 
 sys.path.append(os.getcwd())
 
-from logging import getLogger, FileHandler, Formatter, DEBUG
-from eems.lib import DateCulc
 from eems.lib import DBConnect
 from eems.lib import Const
 from eems.lib import LineTools
@@ -28,20 +26,30 @@ class Core:
         """コンストラクタ"""
         pass
 
-    def simple_process(self, entry_or_leave, reply_token):
+    def simple_process(self, dic_data):
         """
-        description : 入退室のタイプを受け取り、タイプに合わせて動作する
-        args        : entry_or_leave : entry or leave
-                    : reply_token      : リプライ
+        description : 入退室j情報を受け取り、タイプに合わせて動作する
+        args        : dic_data -> 入退室情報
         return      : true / false
         """
         rtn = True
+        # ---------------------
+        # データ取得
+        # ---------------------
+        reply_token = dic_data['reply_token']
+        line_name = dic_data['line_name']
+        user_img = dic_data['user_img']
+        entry_or_leave = dic_data['entry_or_leave']
+
         # ---------------------
         # 入退室処理
         # ---------------------
         if entry_or_leave == Const.LINE_ENTRY:
             # db にデータを挿入
-            pass
+            if not DBConnect.update_or_insert_data(Const.TBL_CURRENT_ENTRY_NAME, dic_data):
+                rtn = False
+
+                return rtn
 
         if entry_or_leave == Const.LINE_LEAVE:
             # db からデータを削除

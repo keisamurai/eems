@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 # Create your models here.
@@ -22,14 +23,19 @@ class User_Master(models.Model):
     # 入室回数
     num_entry = models.IntegerField(default=0)
     # ユーザーの写真のURL
-    user_img = models.URLField(max_length=250)
+    user_img = models.URLField(max_length=250, default='')
 
 
 class Current_Entry(models.Model):
     """
     description: 現在入室しているユーザーのデータ
     """
-    user = models.ForeignKey(User_Master, on_delete=models.PROTECT)
+    # user = models.ForeignKey(User_Master, on_delete=models.PROTECT)
+    line_id = models.CharField(max_length=33, default='')
+    line_name = models.CharField(max_length=128, default='')
+    user_img = models.URLField(max_length=250, default='')
+    entry_time = models.DateTimeField(default=timezone.now)
+    leave_time = models.DateTimeField(default=timezone.now)
 
 
 class Beacon_Log(models.Model):

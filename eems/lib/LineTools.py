@@ -71,17 +71,24 @@ def assign_from_line_request(request):
     if message_type == 'beacon':
         # データ取得
         for event in request_json['events']:
-            user_id = event['source']['userId']
+            line_id = event['source']['userId']
             timestamp = event['timestamp']
             hwid = event['beacon']['hwid']
             enter_or_leave = event['beacon']['type']
 
+        # line ユーザーのプロファイル取得
+        profile = line_bot_api.get_profile(line_id)
+
+        line_name = profile.display_name
+        user_img = profile.picture_url
+        timestamp = timezone.now()
         # データ生成
-        timestamp_date = DateCulc.DateFromMilli(timestamp)
         dic_data = {
             "reply_token": reply_token,
-            "line_id": user_id,
-            "timestamp": timezone.now(),
+            "line_id": line_id,
+            "line_name": line_name,
+            "user_img": user_img,
+            "timestamp": timestamp,
             "hwid": hwid,
             "enter_or_leave": enter_or_leave
         }
@@ -89,7 +96,7 @@ def assign_from_line_request(request):
         # データ保存(DB)
         insert_request_log_tbl(dic_data)
         core = Core.Core()
-        core.simple_process(enter_or_leave, reply_token)
+        core.simple_process(dic_data)
         return rtn
 
     # メッセージリクエスト、Beaconリクエスト以外
