@@ -46,58 +46,193 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- pi Chart -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">入室率</h6>
+    <div class="row">
+        <!-- EntryTransition -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">入室数推移</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="EntryTransition"></canvas>
+                    </div>
+                </div>
             </div>
-            <div class="card-body col-12">
-                <canvas id="myPieChart" class="chartjs-render-monitor"></canvas>
-               <!-- end of entry user  -->
-            </div>
-        <!-- end of pi chart -->
         </div>
+        <!-- End of EntryTransition-->
 
+        <!-- EntryRate-->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">入室率</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="EntryRate"></canvas>
+                    </div>
+                </div>
+                <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-success"></i> entry
+                    </span>
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-info"></i> leave
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- End of EntryRate -->
 
 
     </div>
 
     <!-- Contents Row -->
     <div class="row">
-
-        <!-- Illustrations -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">入室中ユーザー</h6>
-            </div>
-            <div class="card-body col-12">
-                <!-- entry user  -->
-                <div class="mb-3 mx-3">
-                    {% for ce in current_entry %}
-                    <span class="mr-3 d-none d-lg-inline small">{{ce.line_name}}</span>
-                    <img class="img-profile rounded-circle" src="{{ce.user_img}}" width="64" height="64">
-                    {% endfor%}
+        <div class="col-lg-12 mb-4">
+            <!-- Illustrations -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">入室中ユーザー</h6>
                 </div>
-                <!-- end of entry user  -->
+                <div class="card-body col-12">
+                    <!-- entry user  -->
+                    <div class="mb-3 mx-3">
+                        {% for ce in current_entry %}
+                        <span class="mr-3 d-none d-lg-inline small">{{ce.line_name}}</span>
+                        <img class="img-profile rounded-circle" src="{{ce.user_img}}" width="64" height="64">
+                        {% endfor%}
+                    </div>
+                    <!-- end of entry user  -->
+                </div>
             </div>
-        </div>
 
 
-        <!-- データ -->
-        <!-- <div class="card shadow mb-4">
+            <!-- データ -->
+            <!-- <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">ログ取得</h6>
             </div>
             <div class="card-body">
                 <p>{{log_txt}}</p>
-            </div> -->
-        <!-- </div> -->
-
+            </div>
+        </div> -->
+        </div>
     </div>
     <!-- End of Contents Row -->
 
 </div>
 <!-- /.container-fluid -->
 
+<script>
+    // //////////////
+    // EntryTransition
+    // //////////////
+    var data = [1,2,3,3,3,4,5,8,8,9,10,10];
+    var labels = [1,2,3,4,5,6,7,8,9,10,11,12];
+    // var num_entry = 5;
+    // var num_not_entry = 10;
+
+    // data.push(num_entry);
+    // data.push(num_not_entry);
+    // {% for cr_shift_ng in cr_shift_negative %}
+    // cr_shift_negative.push("{{cr_shift_ng}}")
+    // {% endfor %}
+
+    let EntryTransitionChart = document.getElementById('EntryTransition').getContext('2d');
+    let EntryTransitionChartDef = new Chart(EntryTransitionChart, {
+        type: 'line',// bar, harizontalbar , pie, line doughnut, radar, plararea
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '入室数',
+                data: data,
+                backgroundColor: [
+                    'rgba(82, 162, 197, 0.6)',
+                ],
+                // borderWidth: 4,
+                // borderColor: '#333',
+                // hoverBorderWidth: 1,
+                // hoverBorderColor: '#777',
+                pointHoverRadius: 6,
+                pointHoverBackgroundColor: '#ffd155',
+            },]
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        }
+    });
+
+
+    // //////////////
+    // EntryRate
+    // //////////////
+    var data = [];
+    var num_entry = 5;
+    var num_not_entry = 10;
+
+    data.push(num_entry);
+    data.push(num_not_entry);
+    // {% for cr_shift_ng in cr_shift_negative %}
+    // cr_shift_negative.push("{{cr_shift_ng}}")
+    // {% endfor %}
+
+    let EntryRateChart = document.getElementById('EntryRate').getContext('2d');
+    let EntryRateChartDef = new Chart(EntryRateChart, {
+        type: 'doughnut',// bar, harizontalbar , pie, line doughnut, radar, plararea
+        data: {
+            // labels: [entry, leave],
+            datasets: [{
+                //   label: 'opening',
+                data: data,
+                backgroundColor: [
+                    'rgba(50, 204, 18, 0.6)',
+                    'rgba(82, 162, 197, 0.6)',
+                ],
+                // borderWidth: 4,
+                // borderColor: '#333',
+                // hoverBorderWidth: 1,
+                // hoverBorderColor: '#777',
+                pointHoverRadius: 6,
+                pointHoverBackgroundColor: '#ffd155',
+            },]
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        }
+    });
+
+</script>
 {% endblock %}
