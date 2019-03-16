@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Code Master{% endblock %}
+{% block title %}Dash Board{% endblock %}
 {% load staticfiles %}
 
 {% block body %}
@@ -14,13 +14,13 @@
     <!-- Contents Row -->
     <div class="row">
         <div class="col-xl-5 col-md-6 mb-4">
-            <!-- number of entry(today)  -->
+            <!-- number of entry(now)  -->
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">入室者数(本日)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">5人</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">入室者数(現在)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{current_entry.count}}人</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -103,8 +103,8 @@
                     <!-- entry user  -->
                     <div class="mb-3 mx-3">
                         {% for ce in current_entry %}
-                        <span class="mr-3 d-none d-lg-inline small">{{ce.line_name}}</span>
-                        <img class="img-profile rounded-circle" src="{{ce.user_img}}" width="64" height="64">
+                        <span class="mr-3 d-none d-lg-inline small">{{ce.user_info.line_name}}</span>
+                        <img class="img-profile rounded-circle" src="{{ce.user_info.user_img}}" width="64" height="64">
                         {% endfor%}
                     </div>
                     <!-- end of entry user  -->
@@ -139,9 +139,6 @@
 
     // data.push(num_entry);
     // data.push(num_not_entry);
-    // {% for cr_shift_ng in cr_shift_negative %}
-    // cr_shift_negative.push("{{cr_shift_ng}}")
-    // {% endfor %}
 
     let EntryTransitionChart = document.getElementById('EntryTransition').getContext('2d');
     let EntryTransitionChartDef = new Chart(EntryTransitionChart, {
@@ -186,14 +183,13 @@
     // EntryRate
     // //////////////
     var data = [];
-    var num_entry = 5;
-    var num_not_entry = 10;
+    var num_user = {{user_master.count}};
+    var num_entry = {{current_entry.count}};
+    var entry_rate = num_entry / num_user;
+    var not_entry_rate = 1 - entry_rate;
 
-    data.push(num_entry);
-    data.push(num_not_entry);
-    // {% for cr_shift_ng in cr_shift_negative %}
-    // cr_shift_negative.push("{{cr_shift_ng}}")
-    // {% endfor %}
+    data.push(entry_rate);
+    data.push(not_entry_rate);
 
     let EntryRateChart = document.getElementById('EntryRate').getContext('2d');
     let EntryRateChartDef = new Chart(EntryRateChart, {

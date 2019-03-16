@@ -16,6 +16,12 @@ class IndexView(TemplateView):
     def get(self, request, *args, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         # ------------------
+        # set user master infro
+        # ------------------
+        user_master = User_Master.objects.all()
+        context['user_master'] = user_master
+
+        # ------------------
         # set current room info
         # ------------------
         current_entry = Current_Entry.objects.all()

@@ -17,25 +17,38 @@ class User_Master(models.Model):
     # line name
     line_name = models.CharField(max_length=128)
     # 会社名
-    company = models.CharField(max_length=128)
+    company = models.CharField(max_length=128, default='')
     # 所属名
-    department = models.CharField(max_length=128)
+    department = models.CharField(max_length=128, default='')
     # 入室回数
     num_entry = models.IntegerField(default=0)
     # ユーザーの写真のURL
     user_img = models.URLField(max_length=250, default='')
+    # 入室時間
+    entry_time = models.DateTimeField(default=timezone.now)
+    # 退室時間
+    leave_time = models.DateTimeField(default=timezone.now)
 
 
 class Current_Entry(models.Model):
     """
     description: 現在入室しているユーザーのデータ
     """
-    # user = models.ForeignKey(User_Master, on_delete=models.PROTECT)
-    line_id = models.CharField(max_length=33, default='')
-    line_name = models.CharField(max_length=128, default='')
-    user_img = models.URLField(max_length=250, default='')
-    entry_time = models.DateTimeField(default=timezone.now)
-    leave_time = models.DateTimeField(default=timezone.now)
+    user_info = models.ForeignKey(User_Master, on_delete=models.PROTECT, null=True)
+
+
+class Today_Entry(models.Model):
+    """
+    description: 当日の入室した人のデータ
+    """
+    user_info = models.ForeignKey(User_Master, on_delete=models.PROTECT, null=True)
+
+
+class Entry_Leave_Log(models.Model):
+    """
+    description: 入退室時間ログを保管するテーブル
+    """
+    user_info = models.ForeignKey(User_Master, on_delete=models.PROTECT, null=True)
 
 
 class Beacon_Log(models.Model):
