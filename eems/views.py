@@ -22,10 +22,28 @@ class IndexView(TemplateView):
         context['user_master'] = user_master
 
         # ------------------
+        # set today entry info
+        # ------------------
+        today_entry = Today_Entry.objects.all()
+        context['today_entry'] = today_entry
+
+        # ------------------
+        # set Entry Leave log info
+        # ------------------
+        entry_leave = Entry_Leave_Log.objects.all()
+        context['entry_leave'] = entry_leave
+
+        # ------------------
         # set current room info
         # ------------------
         current_entry = Current_Entry.objects.all()
         context['current_entry'] = current_entry
+
+        # ------------------
+        # set today entry info
+        # ------------------
+        today_entry = Today_Entry.objects.all()
+        context['today_entry'] = today_entry
 
         # ------------------
         # set beacon log

@@ -7,8 +7,6 @@ class User_Master(models.Model):
     """
     description: 管理対象ユーザーのマスタ
     """
-    # user_id
-    user_id = models.CharField(max_length=4)
     # line_id
     # ex. U6bca9d80ca9e97f27cfb3077dee3748f
     line_id = models.CharField(max_length=33)

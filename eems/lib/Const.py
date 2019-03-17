@@ -7,11 +7,14 @@ import os
 
 # PJ-related
 PJ_CONFIG = "config"
+APP_NAME = "eems"
 EEMS_PJ_ROOT = os.environ['EEMS_PJ_ROOT']  # pj root : D:\home\site\wwwroot\ (on Azure)
 
 # DB-related
 TBL_USER_MASTER_NAME = 'User_Master'
 TBL_CURRENT_ENTRY_NAME = 'Current_Entry'
+TBL_Today_ENTRY_NAME = 'Today_Entry'
+TBL_Entry_Leave_Log_NAME = 'Entry_Leave_Log'
 TBL_BEACON_LOG_NAME = 'Beacon_Log'
 
 # Line-related

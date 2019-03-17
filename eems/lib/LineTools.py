@@ -52,6 +52,7 @@ def assign_from_line_request(request):
             reply_token = event['replyToken']
             message_type = event['type']
     else:
+        print("[:ERROR:] request.method is not POST : {}".format(request.method))
         return rtn
 
     # --------------------
@@ -80,6 +81,7 @@ def assign_from_line_request(request):
         profile = line_bot_api.get_profile(line_id)
 
         line_name = profile.display_name
+        user_name = line_name
         user_img = profile.picture_url
         timestamp = timezone.now()
         # データ生成
@@ -87,16 +89,18 @@ def assign_from_line_request(request):
             "reply_token": reply_token,
             "line_id": line_id,
             "line_name": line_name,
+            "user_naem": user_name,
             "user_img": user_img,
             "timestamp": timestamp,
             "hwid": hwid,
             "enter_or_leave": enter_or_leave
         }
+        print(dic_data)  # for debug
 
         # データ保存(DB)
         insert_request_log_tbl(dic_data)
         core = Core.Core()
-        core.simple_process(dic_data)
+        core.enter_leave_process(dic_data)
         return rtn
 
     # メッセージリクエスト、Beaconリクエスト以外
