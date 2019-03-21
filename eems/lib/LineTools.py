@@ -20,7 +20,7 @@ from eems.lib import Core
 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, MessageAction, TemplateSendMessage, ButtonsTemplate
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, ButtonsTemplate
 
 # --------------------
 # LineBot設定
@@ -63,9 +63,11 @@ def assign_from_line_request(request):
         # line 接続確認時
         if reply_token == Const.LINE_CONNECT_CHECK_REP_TOKEN:
             return rtn
+
         # line 通常メッセージリクエスト
         else:
-            # 処理したいことがあれば書く...
+            imgpath = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
+            reply_img(imgpath, reply_token)
             return rtn
 
     # Line Beaconからのリクエスト
@@ -137,6 +139,28 @@ def reply_text(text, reply_token):
         line_bot_api.reply_message(
             reply_token,
             TextSendMessage(text=text)
+        )
+    except:
+        return False
+
+    return True
+
+
+def reply_img(imgpath, reply_token):
+    """
+    description : Lineアプリに画像で返答する
+        reply_token (str): Lineアプリに返答するためのトークン
+        imagpath (str): 返答する画像の保存されているパス
+    return      : true/false
+    """
+    # 返答
+    try:
+        line_bot_api.reply_message(
+            reply_token,
+            ImageSendMessage(
+                original_content_url=imgpath,
+                preview_image_url=imgpath,
+            )
         )
     except:
         return False

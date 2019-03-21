@@ -7,3 +7,5 @@ log/debug.log
 test
 # leave operation-related doc only dev
 operation/
+# develop environment setting file is not needed to be uploaded
+config/local_settings.py

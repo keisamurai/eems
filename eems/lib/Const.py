@@ -18,8 +18,8 @@ TBL_Entry_Leave_Log_NAME = 'Entry_Leave_Log'
 TBL_BEACON_LOG_NAME = 'Beacon_Log'
 
 # Line-related
-LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
-LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
+LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN2"]
+LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET2"]
 LINE_PUSH_ENDPOINT = 'https://api.line.me/v2/bot/message/push'
 LINE_REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
 LINE_CONNECT_CHECK_REP_TOKEN = "00000000000000000000000000000000"   # lineの接続確認用 replyToken
