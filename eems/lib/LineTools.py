@@ -161,6 +161,8 @@ def reply_img(imgpath, reply_token):
         imagpath (str): 返答する画像の保存されているパス
     return      : true/false
     """
+    logger = logging.getLogger('django')
+
     # 返答
     try:
         line_bot_api.reply_message(
@@ -170,7 +172,8 @@ def reply_img(imgpath, reply_token):
                 preview_image_url=imgpath,
             )
         )
-    except:
+    except Exception as e:
+        logger.debug("[:ERROR:]process failed. while replying image{0}".format(e))
         return False
 
     return True
