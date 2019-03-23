@@ -25,3 +25,7 @@ LINE_REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
 LINE_CONNECT_CHECK_REP_TOKEN = "00000000000000000000000000000000"   # lineの接続確認用 replyToken
 LINE_ENTRY = 'entry'
 LINE_LEAVE = 'leave'
+
+# Azure-related
+URL_ROOT = 'https://lbeacon.azurewebsites.net/'
+URL_QRCODE = 'https://lbeacon.azurewebsites.net/qrcode'
