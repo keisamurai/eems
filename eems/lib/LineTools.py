@@ -72,7 +72,7 @@ def assign_from_line_request(request):
         else:
             logger.debug('aaaaaa')
             text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
-            path = '/qrcode_test.jpeg'
+            path = './qrcode/qrcode_test.jpeg'
             core = Core.Core()
             url_path = Const.URL_QRCODE + '/qrcode_test.jpeg'
             core.qr_code_process(text, url_path, reply_token)
