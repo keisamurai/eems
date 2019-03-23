@@ -239,9 +239,9 @@ class Core:
 
         try:
             logger.debug("[:DEBUG:] cwd : {0}".format(os.getcwd()))
-            logger.debug("[:DEBUG:]:text:".format(text))
-            logger.debug("[:DEBUG:]:path:".format(path))
-            logger.debug("[:DEBUG:]:replay_toen:".format(reply_token))
+            logger.debug("[:DEBUG:]:text:{0}".format(text))
+            logger.debug("[:DEBUG:]:path:{0}".format(path))
+            logger.debug("[:DEBUG:]:replay_toen:{0}".format(reply_token))
 
             qr = qrcode.make(text)
             qr.save(path)
