@@ -40,11 +40,14 @@ def assign_from_line_request(request):
     """
     rtn = True
 
+    logger = logging.getLogger('django')
+
     # --------------------
     # データ取得(from request)
     # --------------------
     # get request body as text
     request_json = json.loads(request.body.decode('utf-8'))
+    logger.debug('L50')
     # --------------------
     # データ取得(from Json)
     # --------------------
@@ -67,7 +70,6 @@ def assign_from_line_request(request):
 
         # line 通常メッセージリクエスト
         else:
-            logger = logging.getLogger('django')
             logger.debug('aaaaaa')
             text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
             path = './qrcode_test.jpeg'
