@@ -7,6 +7,7 @@ import json
 import os
 import sys
 import datetime
+import logging
 
 from django.utils import timezone
 
@@ -66,6 +67,9 @@ def assign_from_line_request(request):
 
         # line 通常メッセージリクエスト
         else:
+            request_log(request)  # debug
+            logger = logging.logger('django')
+            logger.debug('aaaaaa')
             text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
             path = './qrcode_test.jpeg'
             core = Core.Core()
