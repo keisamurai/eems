@@ -66,8 +66,11 @@ def assign_from_line_request(request):
 
         # line 通常メッセージリクエスト
         else:
-            imgpath = './qrcode_test.jpeg'
-            reply_img(imgpath, reply_token)
+            text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
+            path = './qrcode_test.jpeg'
+            core = Core.Core()
+            core.qr_code_process(text, path, reply_token)
+
             return rtn
 
     # Line Beaconからのリクエスト

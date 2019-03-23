@@ -13,6 +13,7 @@
 # =================================================
 import sys
 import os
+import qrcode
 
 sys.path.append(os.getcwd())
 
@@ -223,3 +224,25 @@ class Core:
         return      :
         """
         pass
+
+    def qr_code_process(self, text, path, reply_token):
+        """
+        description : インプットされたテキストをQRCodeに変換する
+        args        : text -> QRコードに変換するテキスト
+                    : path -> QRコードを保存するパス
+                    : reply_token -> Lineの返信用トークン
+        return      : true/false
+        """
+        rtn = False
+
+        try:
+            qr = qrcode.make(text)
+            qr.save(path)
+
+            LineTools.reply_img(path, reply_token)
+            rtn = True
+        except Exception as e:
+            print("[:ERROR:] getting error : {0}".format(e))
+            return rtn
+
+        return rtn
