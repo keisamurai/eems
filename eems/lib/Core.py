@@ -14,6 +14,7 @@
 import sys
 import os
 import qrcode
+import logging
 
 sys.path.append(os.getcwd())
 
@@ -234,8 +235,11 @@ class Core:
         return      : true/false
         """
         rtn = False
+        logger = logging.getLogger('django')
 
         try:
+            logger.debug("[:DEBUG:] cwd : {0}".format(os.getcwd()))
+
             qr = qrcode.make(text)
             qr.save(path)
 
@@ -243,6 +247,7 @@ class Core:
             rtn = True
         except Exception as e:
             print("[:ERROR:] getting error : {0}".format(e))
+            logger.debug("[:ERROR:] getting error : {0}".format(e))
             return rtn
 
         return rtn
