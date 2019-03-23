@@ -45,7 +45,6 @@ def assign_from_line_request(request):
     # --------------------
     # get request body as text
     request_json = json.loads(request.body.decode('utf-8'))
-    request_log(request)  # debug
     # --------------------
     # データ取得(from Json)
     # --------------------
