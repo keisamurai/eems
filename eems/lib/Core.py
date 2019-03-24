@@ -248,7 +248,7 @@ class Core:
             qr = qrcode.make(text)
             qr.save(path)
 
-            LineTools.reply_img(path, reply_token)
+            LineTools.reply_img(url_path, reply_token)
             rtn = True
         except Exception as e:
             print("[:ERROR:] getting error : {0}".format(e))
