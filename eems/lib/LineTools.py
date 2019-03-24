@@ -22,7 +22,11 @@ from eems.lib import Core
 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, ButtonsTemplate, TemplateSendMessage, DatetimePickerTemplateAction, PostbackEvent
+from linebot.models import (
+    MessageEvent, TextMessage, TextSendMessage,
+    ImageSendMessage, ButtonsTemplate, TemplateSendMessage,
+    DatetimePickerTemplateAction, PostbackEvent
+)
 
 # --------------------
 # LineBot設定
@@ -42,7 +46,12 @@ def assign_from_line_request(request):
     rtn = True
 
     logger = logging.getLogger('django')
-
+    # --------------------
+    # 署名検証
+    # ※Lineサーバーからのリクエストか検証する
+    # --------------------
+    if not validate_sig(request):
+        return False
     # --------------------
     # データ取得(from request)
     # --------------------
@@ -136,6 +145,28 @@ def assign_from_line_request(request):
     # メッセージリクエスト、Beaconリクエスト以外
     rtn = False
     return rtn
+
+
+def validate_sig(request):
+    """
+    description : X-Line-Signatureを検証する
+    args        : body -> リクエストbody(request.body.decode('utf8'))
+                : signature -> リクエストheader内のx-line-signature
+    return      : True/False
+    """
+    logger = logging.getLogger('django')
+
+    # request.METAでは、HTTTP_ prefixがつくことに注意
+    # https://stackoverflow.com/questions/3889769/how-can-i-get-all-the-request-headers-in-django
+    signature = request.META['HTTP_X_LINE_SIGNATURE']
+    body = request.body.decode('utf-8')
+    try:
+        handler.handle(body, signature)
+        return True
+
+    except Exception as e:
+        logger.error('[:ERROR:] error while validating signature:{0}'.format(e))
+        return False
 
 
 def insert_request_log_tbl(dic_data):
