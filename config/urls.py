@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', eems_views.IndexView.as_view()),
     path('log/', eems_views.LogView.as_view()),
+    path('qrcode', eems_views.qrcode, name='qrcode'),
     path('webhook', eems_views.webhook, name='webhook'),
 ]

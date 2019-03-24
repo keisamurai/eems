@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.http import HttpResponse
 
 import json
+import logging
 from django_pandas.io import read_frame
 
 from eems.models import *
@@ -90,3 +91,19 @@ def webhook(request):
         return HttpResponse(status=200)
     else:
         return HttpResponse(status=500)
+
+
+def qrcode(request):
+    """
+    description : qrcodeの取得リクエストを受け取り、qrcod（image/jpeg)をhttpresponseで返す
+    args        : Lineからのrequest
+    """
+    logger = logging.getLogger('django')
+
+    path = './qrcode/qrcode_test.jpeg'
+    try:
+        qr = open(path, "rb").read()
+        return HttpResponse(qr, content_type="image/jpeg")
+    except Exception as e:
+        logger.error("[:ERROR:]failed to respond qrcode:{0}".format(e))
+        return HttpResponse(status_code=404)
