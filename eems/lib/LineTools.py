@@ -55,9 +55,11 @@ def assign_from_line_request(request):
             reply_token = event['replyToken']
             message_type = event['type']
 
+            logging.debug("[:debug:]{0}".format(event))
             # datetimepicker用の対応
             # https://qiita.com/nnsnodnb/items/d07a768eeea7be6cec02
             if isinstance(event, PostbackEvent):
+                logging.debug("[:debug:]{0}".format(event))
                 date_postback = event['postback']['params']['date']
                 # logger.debug(date_postback)
                 text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
@@ -74,7 +76,7 @@ def assign_from_line_request(request):
                 return True
 
     else:
-        print("[:ERROR:] request.method is not POST : {}".format(request.method))
+        logger.debug("[:ERROR:] request.method is not POST : {}".format(request.method))
         return rtn
 
     # --------------------
