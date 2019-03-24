@@ -10,6 +10,7 @@ import datetime
 import logging
 
 from django.utils import timezone
+from django.conf import settings
 
 sys.path.append(os.getcwd())
 
@@ -55,11 +56,15 @@ def assign_from_line_request(request):
             reply_token = event['replyToken']
             message_type = event['type']
 
-            logging.debug("[:debug:]{0}".format(event))
+            if settings.DEBUG is True:
+                logging.debug("[:debug:]{0}".format(event))
+
             # datetimepicker用の対応
             # https://qiita.com/nnsnodnb/items/d07a768eeea7be6cec02
-            if isinstance(event, PostbackEvent):
-                logging.debug("[:debug:]{0}".format(event))
+            if event['type'] == 'postback':
+                if settings.DEBUG is True:
+                    logging.debug("[:debug:]{0}".format(event))
+
                 date_postback = event['postback']['params']['date']
                 # logger.debug(date_postback)
                 text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
@@ -90,7 +95,6 @@ def assign_from_line_request(request):
 
         # line 通常メッセージリクエスト
         else:
-            # 何かあれば実装する
             reply_datetimepicker(reply_token)
             return rtn
 
