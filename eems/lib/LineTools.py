@@ -58,7 +58,7 @@ def assign_from_line_request(request):
             # datetimepicker用の対応
             # https://qiita.com/nnsnodnb/items/d07a768eeea7be6cec02
             if isinstance(event, PostbackEvent):
-                date_postback = event.postback.params['date']
+                date_postback = event['postback']['params']['date']
                 # logger.debug(date_postback)
                 text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
                 path = './qrcode/qrcode_test.jpeg'
