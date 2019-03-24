@@ -21,7 +21,7 @@ from eems.lib import Core
 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, ButtonsTemplate
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, ButtonsTemplate, TemplateSendMessage
 
 # --------------------
 # LineBot設定
@@ -47,7 +47,6 @@ def assign_from_line_request(request):
     # --------------------
     # get request body as text
     request_json = json.loads(request.body.decode('utf-8'))
-    logger.debug('L50')
     # --------------------
     # データ取得(from Json)
     # --------------------
@@ -75,6 +74,7 @@ def assign_from_line_request(request):
             path = './qrcode/qrcode_test.jpeg'
             core = Core.Core()
             url_path = Const.URL_QRCODE
+            reply_datetimepicker(reply_token)
             core.qr_code_process(text, path, url_path, reply_token)
 
             return rtn
@@ -178,6 +178,43 @@ def reply_img(imgpath, reply_token):
         return False
 
     return True
+
+
+def reply_datetimepicker(reply_token):
+    """
+    description : 日付選択アクションをユーザーに提供する
+    args        : reply_token -> 返信用トークン
+    """
+    logger = logging.getLogger('django')
+
+    date_picker = TemplateSendMessage(
+        alt_text="this is a buttons template",
+        template=ButtonsTemplate(
+            text="Please select",
+            title="入室予約をしますか？予約をする場合、「はい」を選択し、入室予定をご入力ください",
+            actions=[
+                DatetimePickerTemplateAction(
+                    label='はい',
+                    data="action=datetemp&selectId=1",
+                    mode="date",
+                )
+                # postback(
+                #     label='いいえ',
+                #     data="action=cancel&selectId=2"
+                # ),
+            ]
+        )
+    )
+
+    try:
+        line_bot_api.reply_message(
+            reply_token,
+            date_picker
+        )
+        return True
+    except Exception as e:
+        logger.debug("[:ERROR:] process failed while send datetimepicker template:{0}".format(e))
+        return False
 
 
 def request_log(request):
