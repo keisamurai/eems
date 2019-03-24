@@ -226,11 +226,12 @@ class Core:
         """
         pass
 
-    def qr_code_process(self, text, path, reply_token):
+    def qr_code_process(self, text, path, url_path, reply_token):
         """
         description : インプットされたテキストをQRCodeに変換する
         args        : text -> QRコードに変換するテキスト
                     : path -> QRコードを保存するパス
+                    : url_path -> QRコードのパス(https)
                     : reply_token -> Lineの返信用トークン
         return      : true/false
         """
@@ -238,9 +239,10 @@ class Core:
         logger = logging.getLogger('django')
 
         try:
-            logger.debug("[:DEBUG:] cwd : {0}".format(os.getcwd()))
+            logger.debug("[:DEBUG:] cwd :{0}".format(os.getcwd()))
             logger.debug("[:DEBUG:]:text:{0}".format(text))
             logger.debug("[:DEBUG:]:path:{0}".format(path))
+            logger.debug("[:DEBUG:]:url_path:{0}".format(url_path))
             logger.debug("[:DEBUG:]:replay_toen:{0}".format(reply_token))
 
             qr = qrcode.make(text)

@@ -75,7 +75,7 @@ def assign_from_line_request(request):
             path = './qrcode/qrcode_test.jpeg'
             core = Core.Core()
             url_path = Const.URL_QRCODE + '/qrcode_test.jpeg'
-            core.qr_code_process(text, url_path, reply_token)
+            core.qr_code_process(text, path, url_path, reply_token)
 
             return rtn
 
