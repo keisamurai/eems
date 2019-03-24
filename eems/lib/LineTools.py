@@ -59,12 +59,17 @@ def assign_from_line_request(request):
             # https://qiita.com/nnsnodnb/items/d07a768eeea7be6cec02
             if isinstance(event, PostbackEvent):
                 date_postback = event.postback.params['date']
-                logger.debug(date_postback)
+                # logger.debug(date_postback)
                 text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
                 path = './qrcode/qrcode_test.jpeg'
-                core = Core.Core()
-                url_path = Const.URL_QRCODE
-                core.qr_code_process(text, path, url_path, reply_token)
+                try:
+                    core = Core.Core()
+                    url_path = Const.URL_QRCODE
+                    core.qr_code_process(text, path, url_path, reply_token)
+                except Exception as e:
+                    logger.debug("[:ERROR:]failed while qrcode_process:{0}".format(e))
+                    logger.debug("[:ERROR:]failed while qrcode_process:{0}".format(date_postback))
+                    return False
 
                 return True
 
