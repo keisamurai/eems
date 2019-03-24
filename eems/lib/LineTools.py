@@ -21,7 +21,7 @@ from eems.lib import Core
 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, ButtonsTemplate, TemplateSendMessage, DatetimePickerTemplateAction
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, ButtonsTemplate, TemplateSendMessage, DatetimePickerTemplateAction, PostbackEvent
 
 # --------------------
 # LineBot設定
@@ -54,6 +54,20 @@ def assign_from_line_request(request):
         for event in request_json['events']:
             reply_token = event['replyToken']
             message_type = event['type']
+
+            # datetimepicker用の対応
+            # https://qiita.com/nnsnodnb/items/d07a768eeea7be6cec02
+            if isinstance(event, PostbackEvent):
+                date_postback = event.postback.params['date']
+                logger.debug(date_postback)
+                text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
+                path = './qrcode/qrcode_test.jpeg'
+                core = Core.Core()
+                url_path = Const.URL_QRCODE
+                core.qr_code_process(text, path, url_path, reply_token)
+
+                return True
+
     else:
         print("[:ERROR:] request.method is not POST : {}".format(request.method))
         return rtn
@@ -69,14 +83,8 @@ def assign_from_line_request(request):
 
         # line 通常メッセージリクエスト
         else:
-            logger.debug('aaaaaa')
-            text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
-            path = './qrcode/qrcode_test.jpeg'
-            core = Core.Core()
-            url_path = Const.URL_QRCODE
+            # 何かあれば実装する
             reply_datetimepicker(reply_token)
-            core.qr_code_process(text, path, url_path, reply_token)
-
             return rtn
 
     # Line Beaconからのリクエスト
@@ -184,6 +192,7 @@ def reply_datetimepicker(reply_token):
     """
     description : 日付選択アクションをユーザーに提供する
     args        : reply_token -> 返信用トークン
+    https://qiita.com/nnsnodnb/items/d07a768eeea7be6cec02
     """
     logger = logging.getLogger('django')
 
@@ -191,7 +200,7 @@ def reply_datetimepicker(reply_token):
         alt_text="this is a buttons template",
         template=ButtonsTemplate(
             text="Please select",
-            title="入室予約をしますか？予約をする場合、「はい」を選択し、入室予定をご入力ください",
+            title="入室予約をしすか？予約をする場合、「はい」を選択し、入室予定をご入力ください",
             actions=[
                 DatetimePickerTemplateAction(
                     label='はい',
