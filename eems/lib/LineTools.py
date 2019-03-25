@@ -25,7 +25,7 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
     ImageSendMessage, ButtonsTemplate, TemplateSendMessage,
-    DatetimePickerTemplateAction, PostbackEvent
+    DatetimePickerTemplateAction, PostbackEvent, PostbackAction
 )
 
 # --------------------
@@ -74,6 +74,12 @@ def assign_from_line_request(request):
                 if settings.DEBUG is True:
                     logging.debug("[:debug:]{0}".format(event))
 
+                # 「いいえ」が選択されている場合
+                if event['postback']['data'] == "action=cancel&selectID=2":
+                    reply_text('入室予定があればまたご連絡ください。', reply_token)
+                    return True
+
+                # 「はい」が選択されている場合
                 date_postback = event['postback']['params']['date']
                 # logger.debug(date_postback)
                 text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
@@ -248,11 +254,11 @@ def reply_datetimepicker(reply_token):
                     label='はい',
                     data="action=datetemp&selectId=1",
                     mode="date",
+                ),
+                PostbackAction(
+                    label='いいえ',
+                    data="action=cancel&selectID=2"
                 )
-                # postback(
-                #     label='いいえ',
-                #     data="action=cancel&selectId=2"
-                # ),
             ]
         )
     )
