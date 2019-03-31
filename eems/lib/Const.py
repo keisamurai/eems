@@ -16,6 +16,7 @@ TBL_CURRENT_ENTRY_NAME = 'Current_Entry'
 TBL_Today_ENTRY_NAME = 'Today_Entry'
 TBL_Entry_Leave_Log_NAME = 'Entry_Leave_Log'
 TBL_BEACON_LOG_NAME = 'Beacon_Log'
+TBL_RESERVATIONS_NAME = 'Reservations'
 
 # Line-related
 LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN2"]

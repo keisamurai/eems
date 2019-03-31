@@ -63,3 +63,22 @@ class Beacon_Log(models.Model):
     hwid = models.CharField(max_length=10)
     # enter_or_leave
     enter_or_leave = models.CharField(max_length=5)
+
+
+class Reservations(models.Model):
+    """
+    description: 予約管理用テーブル
+    """
+    # 予約番号(ハッシュ値(md5))
+    book_id = models.CharField(max_length=32)
+    # line id
+    line_id = models.CharField(max_length=33)
+    # entry_day
+    entry_day = models.DateTimeField()
+
+
+class Reservations_Today(models.Model):
+    """
+    description: 予約管理用テーブル(当日)
+    """
+    reservation_info = models.ForeignKey(Reservations, on_delete=models.PROTECT)

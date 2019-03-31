@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView
 from django.http import HttpResponse
 
+# for api
+from django_filters import rest_framework
+from rest_framework import viewsets, filters
+from .serializer import ReservationsSerializer, Reservations_TodaySerializer
+
 import json
 import logging
 from django_pandas.io import read_frame
@@ -73,6 +78,52 @@ class LogView(TemplateView):
         context['beacon_log'] = beacon_log
 
         return render(self.request, self.template_name, context)
+
+
+class Reservation_CalendarView(TemplateView):
+    template_name = 'reservation_calendar.html'
+
+    def get(self, request, *args, **kwargs):
+        context = super(Reservation_TableView, self).get_context_data(**kwargs)
+
+        # --------------------
+        # set data
+        # --------------------
+
+        return render(self.request, self.template_name, context)
+
+
+class Reservation_TableView(TemplateView):
+    template_name = 'reservation_table.html'
+
+    def get(self, request, *args, **kwargs):
+        context = super(Reservation_TableView, self).get_context_data(**kwargs)
+
+        # --------------------
+        # set data
+        # --------------------
+
+        return render(self.request, self.template_name, context)
+
+
+class ReservationsFilter(rest_framework.FilterSet):
+    class Meta:
+        model = Reservations
+        fields = ['book_id', 'line_id', 'entry_day']
+
+
+class ReservationsViewSet(viewsets.ModelViewSet):
+    # http://www.tomchristie.com/rest-framework-2-docs/api-guide/filtering
+    queryset = Reservations.objects.all()
+    serializer_class = ReservationsSerializer
+    filter_fields = ['book_id', 'line_id', 'entry_day']
+
+
+class Reservations_TodayViewSet(viewsets.ModelViewSet):
+    # http://www.tomchristie.com/rest-framework-2-docs/api-guide/filtering
+    queryset = Reservations_Today.objects.all()
+    serializer_class = Reservations_TodaySerializer
+    filter_fields = ['reservation_info']
 
 
 def webhook(request):

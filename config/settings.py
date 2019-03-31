@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'eems',  # 追加分
+    'eems',  # app name
+    'rest_framework',  # for rest framework
+    'django_filters',  # for django_filters
 ]
 
 MIDDLEWARE = [
@@ -166,4 +168,8 @@ LOGGING = {
         #     'propagate': True,
         # },
     },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
