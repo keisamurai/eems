@@ -27,8 +27,7 @@ from eems.lib import LineTools
 class Core:
     def __init__(self):
         """コンストラクタ"""
-        # loggerを生成
-        logger = logging.getLogger('django')
+        pass
 
     def simple_process(self, dic_data):
         """
@@ -274,6 +273,7 @@ class Core:
                    : date_postback -> postback された日付
         return     : rn -> 予約番号
         """
+        logger = logging.getLogger('django')
         text = str(line_id) + str(date_postback)
 
         # MD5 hash
