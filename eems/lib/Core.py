@@ -267,7 +267,7 @@ class Core:
 
         return rtn
 
-    def make_reservation_num(line_id, date_postback):
+    def make_reservation_num(self, line_id, date_postback):
         """
         description: line_idと日付を入力に、md5で予約番号を生成する
         args       : line_id -> line id
