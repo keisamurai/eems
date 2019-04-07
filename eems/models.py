@@ -74,7 +74,7 @@ class Reservations(models.Model):
     # line id
     line_id = models.CharField(max_length=33)
     # entry_day
-    entry_day = models.DateTimeField()
+    entry_day = models.CharField(max_length=10)
 
 
 class Reservations_Today(models.Model):

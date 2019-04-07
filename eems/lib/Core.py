@@ -15,6 +15,7 @@ import sys
 import os
 import qrcode
 import logging
+import hashlib
 
 sys.path.append(os.getcwd())
 
@@ -26,7 +27,8 @@ from eems.lib import LineTools
 class Core:
     def __init__(self):
         """コンストラクタ"""
-        pass
+        # loggerを生成
+        logger = logging.getLogger('django')
 
     def simple_process(self, dic_data):
         """
@@ -226,10 +228,11 @@ class Core:
         """
         pass
 
-    def qr_code_process(self, text, path, url_path, reply_token):
+    def qr_code_process(self, text, dic_data, path, url_path, reply_token):
         """
-        description : インプットされたテキストをQRCodeに変換する
+        description : インプットされたテキストをQRCodeに変換し、ユーザーに返却する + DB予約情報を格納する
         args        : text -> QRコードに変換するテキスト
+                    : dic_data -> DBに格納するデータ
                     : path -> QRコードを保存するパス
                     : url_path -> QRコードのパス(https)
                     : reply_token -> Lineの返信用トークン
@@ -245,14 +248,37 @@ class Core:
             logger.debug("[:DEBUG:]:url_path:{0}".format(url_path))
             logger.debug("[:DEBUG:]:replay_toen:{0}".format(reply_token))
 
+            # qrcode 生成
             qr = qrcode.make(text)
             qr.save(path)
 
+            # 予約情報をDBに登録
+            tbl_name = Const.TBL_RESERVATIONS_NAME
+            DBConnect.insert_info(tbl_name, dic_data)
+
+            # lineにて応答
             LineTools.reply_img(url_path, reply_token)
             rtn = True
+
         except Exception as e:
             print("[:ERROR:] getting error : {0}".format(e))
             logger.debug("[:ERROR:] getting error : {0}".format(e))
             return rtn
 
         return rtn
+
+    def make_reservation_num(line_id, date_postback):
+        """
+        description: line_idと日付を入力に、md5で予約番号を生成する
+        args       : line_id -> line id
+                   : date_postback -> postback された日付
+        return     : rn -> 予約番号
+        """
+        text = str(line_id) + str(date_postback)
+
+        # MD5 hash
+        hs_md5 = hashlib.md5(text.encode()).hexdigest()
+        logger.debug("[:INFO:] debug : {0}".format(hs_md5))
+        print("[:MD5:]{0}".format(hs_md5))
+
+        return hs_md5

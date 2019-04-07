@@ -64,6 +64,7 @@ def assign_from_line_request(request):
         for event in request_json['events']:
             reply_token = event['replyToken']
             message_type = event['type']
+            line_id = event['source']['userId']
 
             if settings.DEBUG is True:
                 logging.debug("[:debug:]{0}".format(event))
@@ -81,13 +82,27 @@ def assign_from_line_request(request):
 
                 # 「はい」が選択されている場合
                 date_postback = event['postback']['params']['date']
-                # logger.debug(date_postback)
-                text = 'https://www.theverge.com/circuitbreaker/2019/2/26/18241117/energizer-power-max-p18k-pop-huge-battery-phone-mwc-2019'
+
+                core = Core.Core()
+                # 予約番号生成
+                book_id = core.make_reservation_num(line_id, date_postback)
+
+                entry_day = date_postback
+
+                # データ生成
+                dic_data = {
+                    "book_id": book_id,
+                    "line_id": line_id,
+                    "entry_day": entry_day,
+                }
+
                 path = './qrcode/qrcode_test.jpeg'
+                # logger.debug(date_postback)
                 try:
-                    core = Core.Core()
                     url_path = Const.URL_QRCODE
-                    core.qr_code_process(text, path, url_path, reply_token)
+                    # qr_codeを生成し、情報をユーザーに返却+dbに格納する
+                    core.qr_code_process(text, dic_data, path, url_path, reply_token)
+
                 except Exception as e:
                     logger.debug("[:ERROR:]failed while qrcode_process:{0}".format(e))
                     logger.debug("[:ERROR:]failed while qrcode_process:{0}".format(date_postback))
@@ -241,6 +256,7 @@ def reply_datetimepicker(reply_token):
     description : 日付選択アクションをユーザーに提供する
     args        : reply_token -> 返信用トークン
     https://qiita.com/nnsnodnb/items/d07a768eeea7be6cec02
+    ドキュメント  https://developers.line.biz/en/reference/messaging-api/#datetime-picker-action
     """
     logger = logging.getLogger('django')
 

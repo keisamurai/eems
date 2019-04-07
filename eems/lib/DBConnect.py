@@ -55,7 +55,7 @@ def insert_info(tbl_name, dic_data, queryset=""):
 
     django.setup()
 
-    from eems.models import User_Master, Current_Entry, Today_Entry, Beacon_Log
+    from eems.models import User_Master, Current_Entry, Today_Entry, Beacon_Log, Reservations, Reservations_Today
 
     rtn = False
 
@@ -117,6 +117,19 @@ def insert_info(tbl_name, dic_data, queryset=""):
         except Exception as e:
             print("[:ERROR:] getting table data({0}) failed: {1}".format(tbl_name, e))
             return rtn
+
+    elif tbl_name == Const.TBL_RESERVATIONS_NAME:
+        try:
+            Reservations(
+                book_id=dic_data['book_id'],
+                line_id=dic_data['line_id'],
+                entry_day=dic_data['entry_day'],
+            ).save()
+
+        except Exception as e:
+            print("[:ERROR:] getting table data({0}) failed: {1}".format(tbl_name, e))
+            return rtn
+ 
     else:
         print("[:ERROR:] No such table ({0})".format(tbl_name))
         return rnt
