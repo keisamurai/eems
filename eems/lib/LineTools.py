@@ -101,7 +101,7 @@ def assign_from_line_request(request):
                 try:
                     url_path = Const.URL_QRCODE
                     # qr_codeを生成し、情報をユーザーに返却+dbに格納する
-                    core.qr_code_process(text, dic_data, path, url_path, reply_token)
+                    core.qr_code_process(book_id, dic_data, path, url_path, reply_token)
 
                 except Exception as e:
                     logger.debug("[:ERROR:]failed while qrcode_process:{0}".format(e))
