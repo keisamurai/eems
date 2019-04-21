@@ -18,7 +18,7 @@ def api_curl(add_url):
     args       : add_url -> request_urlに追加するurl
     return     : response
     """
-    request_url = 'https://lbeacon.azurewebsites.net/api/reservations/{0}'.format(add_url)
+    request_url = 'https://lbeacon.azurewebsites.net/api/reservations/?book_id={0}'.format(add_url)
 
     response = requests.get(request_url)
 
@@ -49,12 +49,12 @@ def check_booking_num(qr_data):
 
     flag = 0
 
-    response = api_curl(data)
+    response = api_curl(qr_data)
     if response.status_code == 404:
         print("[:ERROR:]No data")
         return False
 
-    else response.status_code == 200:
+    elif response.status_code == 200:
         # json パース
         json_body = response.json()
         book_id = json_body[0]['book_id']
@@ -62,24 +62,15 @@ def check_booking_num(qr_data):
         entry_day = json_body[0]['entry_day']
 
         # 予約番号確認
-        if data == book_id:
+        if qr_data == book_id:
             print('[:INFO:] Right Booking Number')
-            # 日付確認
-            if entry_day = datetime.datetime.now():
-                print('[:INFO:] Right date')
-                flag = 1
-
-        if flag == 1:
-            print('[:INFO:]You can enter room')
-        else:
-            return
 
     # api から予約されている日付を取得
     today_api = entry_day
 
     # 予約されている日付が本日日付であることをチェック
     today_system = datetime.datetime.today()
-    today_system = datetime.datetime.strftime(today, "%Y-%m-%d")
+    today_system = datetime.datetime.strftime(today_system, "%Y-%m-%d")
 
     if today_api != today_system:
         print("[:INFO:]today_api != today_system")
@@ -95,11 +86,11 @@ def camera_read_qrcode(cam_num):
     return     : True/False
     # https://qiita.com/Oside/items/09eadb3b69d2b46c0ac2
     """
-    cap = cv2.VideoCapture(cam_nam)  # ここでエラーを吐いたら ls /dev/video* を実行してカメラを認識しているか確認
+    cap = cv2.VideoCapture(cam_num)  # ここでエラーを吐いたら ls /dev/video* を実行してカメラを認識しているか確認
 
     cap.set(cv2.CAP_PROP_FPS, 30)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 620)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
 
     while True:
         ret, frame = cap.read()
@@ -127,5 +118,5 @@ def camera_read_qrcode(cam_num):
 
 if __name__ == '__main__':
     # camera qrcode読み取り
-    NUM_CAMERA = 1  # カメラ番号:外付けカメラ
-    camera_read_qrcode(NUMA_CAMERA)
+    NUM_CAMERA = 0  # カメラ番号:外付けカメラ
+    camera_read_qrcode(NUM_CAMERA)

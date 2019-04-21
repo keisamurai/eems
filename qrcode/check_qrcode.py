@@ -58,12 +58,12 @@ if __name__ == '__main__':
             if entry_day = datetime.datetime.now():
                 print('[:INFO:] Right date')
                 flag = 1
-        
+
         if flag == 1:
             print('[:INFO:]You can enter room')
         else:
             return
-        
+
         # beep
 
         # entry-leave log update

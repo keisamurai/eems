@@ -39,7 +39,7 @@ handler = WebhookHandler(Const.LINE_CHANNEL_SECRET)
 
 def assign_from_line_request(request):
     """
-    description : line からのwebhookに対して、処理を振り分ける
+    description : line からのwebhookに対して、処理を振り分ける(QR-CODE対応)
     args        : request -> lineからのrequest
     return      : True/False
     """
@@ -96,7 +96,7 @@ def assign_from_line_request(request):
                     "entry_day": entry_day,
                 }
 
-                path = './qrcode/qrcode_test.jpeg'
+                path = './qrcode/qrcode_' + line_id + '.jpeg'
                 # logger.debug(date_postback)
                 try:
                     url_path = Const.URL_QRCODE
@@ -119,16 +119,18 @@ def assign_from_line_request(request):
     # --------------------
     # メッセージリクエスト
     if message_type == 'message':
-        # line 接続確認時
+        # line 接続確認時(from line developpers)
         if reply_token == Const.LINE_CONNECT_CHECK_REP_TOKEN:
             return rtn
 
         # line 通常メッセージリクエスト
+        # datetimepickerを返す
         else:
             reply_datetimepicker(reply_token)
             return rtn
 
     # Line Beaconからのリクエスト
+    # 使っていない。。時間があるときに削除対応しゅる
     if message_type == 'beacon':
         # データ取得
         for event in request_json['events']:
