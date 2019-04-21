@@ -5,7 +5,7 @@ from django.http import HttpResponse
 # for api
 from django_filters import rest_framework
 from rest_framework import viewsets, filters
-from .serializer import ReservationsSerializer, Reservations_TodaySerializer
+from .serializer import Current_EntrySerializer, Today_EntrySerializer, ReservationsSerializer, Reservations_TodaySerializer
 
 import json
 import logging
@@ -104,6 +104,20 @@ class Reservation_TableView(TemplateView):
         # --------------------
 
         return render(self.request, self.template_name, context)
+
+
+class Current_EntryViewSet(viewsets.ModelViewSet):
+    # http://www.tomchristie.com/rest-framework-2-docs/api-guide/filtering
+    queryset = Current_Entry.objects.all()
+    serializer_class = Current_EntrySerializer
+    filter_fields = ['user_info']
+
+
+class Today_EntryViewSet(viewsets.ModelViewSet):
+    # http://www.tomchristie.com/rest-framework-2-docs/api-guide/filtering
+    queryset = Today_Entry.objects.all()
+    serializer_class = Today_EntrySerializer
+    filter_fields = ['user_info']
 
 
 class ReservationsFilter(rest_framework.FilterSet):

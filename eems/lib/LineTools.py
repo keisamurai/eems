@@ -39,7 +39,7 @@ handler = WebhookHandler(Const.LINE_CHANNEL_SECRET)
 
 def assign_from_line_request(request):
     """
-    description : line からのwebhookに対して、処理を振り分ける(QR-CODE対応)
+    description : line からのwebhookに対して、処理を振り分ける
     args        : request -> lineからのrequest
     return      : True/False
     """
@@ -96,7 +96,7 @@ def assign_from_line_request(request):
                     "entry_day": entry_day,
                 }
 
-                path = './qrcode/qrcode_' + line_id + '.jpeg'
+                path = './qrcode/qrcode_test.jpeg'
                 # logger.debug(date_postback)
                 try:
                     url_path = Const.URL_QRCODE

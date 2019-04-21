@@ -12,13 +12,13 @@ from pyzbar.pyzbar import decode
 NUMBER_OF_BOOKING_NUM = 32  # 予約番号の文字数
 
 
-def api_curl(add_url):
+def api_get(add_url):
     """
-    description: api向けにcurlを実行しresponseを取得する
+    description: api向けにcurlを実行しresponseを取得する(get)
     args       : add_url -> request_urlに追加するurl
     return     : response
     """
-    request_url = 'https://lbeacon.azurewebsites.net/api/reservations/?book_id={0}'.format(add_url)
+    request_url = 'https://lbeacon.azurewebsites.net/api/{0}'.format(add_url)
 
     response = requests.get(request_url)
 
@@ -49,7 +49,9 @@ def check_booking_num(qr_data):
 
     flag = 0
 
-    response = api_curl(qr_data)
+    add_url = 'reservations/?book_id={0}'.format(qr_data)
+
+    response = api_get(add_url)
     if response.status_code == 404:
         print("[:ERROR:]No data")
         return False
@@ -79,6 +81,32 @@ def check_booking_num(qr_data):
     return True
 
 
+def entry_leave_process(qr_data):
+    """
+    description : 入退室処理 (ユーザーが正しいqr_codeをかざしているときにだけ呼び出される)
+    args        : qr_data -> 対象のQRコード
+    return      : True/False
+    """
+    # --------------------------------
+    # apiからユーザーの情報を取得し、Current_EntryとToday_Entryに追加されているかチェック
+    # --------------------------------
+    # ユーザー情報取得
+    add_url = 'Current_Entry/
+    response = api_get(add_url)
+    if response.status_code == 404:
+        print("[:ERROR:]No data")
+        return False
+
+    elif response.status_code == 200:
+        # json パース
+        json_body = response.json()
+        book_id = json_body[0]['book_id']
+        line_id = json_body[0]['line_id']
+        entry_day = json_body[0]['entry_day']
+
+    # Current_Entryに照会
+
+
 def camera_read_qrcode(cam_num):
     """
     description: カメラを起動させ、QRコードを検知+読み込む
@@ -105,8 +133,14 @@ def camera_read_qrcode(cam_num):
                 # 予約番号を確認する
                 # ----------------------------
                 if check_booking_num(qr_data):
+                    # 予約番号が確認できた時の処理
+                    # ※入室も退室も同じ反応をする(音を出す)
                     print("[:INFO:] welcome to our room!")
+
+                    # 入退室処理
+                    entry_leave_process(qr_code)
                 else:
+                    # 予約番号が確認できなかった時の処理
                     print("[:INFO:] please booking in ahead comming in")
 
         if cv2.waitKey(1) == 27:  # Escキーで終了(GUIがある場合のみ)
@@ -118,5 +152,5 @@ def camera_read_qrcode(cam_num):
 
 if __name__ == '__main__':
     # camera qrcode読み取り
-    NUM_CAMERA = 0  # カメラ番号:外付けカメラ
+    NUM_CAMERA = 0  # カメラ番号
     camera_read_qrcode(NUM_CAMERA)
