@@ -1,0 +1,3 @@
+<runserver>
+    ・local_settings.pyを開発環境で読み込んでrunserverする方法
+    # python manage.py --settings config.local_settings

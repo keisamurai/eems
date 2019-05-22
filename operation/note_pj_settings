@@ -1,0 +1,32 @@
+<Django Project Settings>
+Django アプリケーションを素早く構築するための手順を以下に記載しておく.何かあれば追記してメンテナンスすること
+
+#1 プロジェクトを作成する(プロジェクトのsettings.py, urls.py などはconfigフォルダに保存)
+    $ django-admin.py startproject config .
+
+#2 アプリケーションを追加する
+    $ python manage.py startapp <app name>
+
+#3 gitプロジェクト ディレクトリにする
+    $ git init
+
+#4 過去プロジェクトから以下のフォルダをコピーする。(再利用できるので)
+    /<PJ_ROOT>/.gitignore
+    /<PJ_ROOT>/.deployment
+    /<PJ_ROOT>/deploy.cmd
+    /<PJ_ROOT>/requirements.txt
+    /<PJ_ROOT>/web.config
+
+    /<PJ_ROOT>/test/*
+    /<PJ_ROOT>/operation/*
+    /<PJ_ROOT>/static/*     <--- sb admin2 を利用する場合
+    /<PJ_ROOT>/<APP>/*   
+
+    /<PJ_ROOT>/<config>/local_settings.py   
+    /<PJ_ROOT>/<config>/settings.py  <--  ロギングの設定とかが入っているので
+
+#5  settings 修正
+    INSTALLED_APPS ->　アプリ名修正
+
+#6 urls　修正
+    urls.pyを修正する -> path('', <app名>_views.IndexView.as_view())

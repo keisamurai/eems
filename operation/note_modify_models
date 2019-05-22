@@ -1,0 +1,18 @@
+## note_modify_models ##
+models.pyを修正した後、データベース(sqlit3)を一度だけauzreにpushし、その後
+pushされないようにする必要がある。
+
+●1度目のpush
+    .gitignore　で　db.sqlite3をコメントアウトする
+    git add --all
+    git commit -m ''
+    git push azure master
+
+●2度目のpush
+    git checkout db.sqlite3
+    .gitignoreでdb.sqlite3のコメントから解除する
+
+<models 修正手順>
+    1.modelsを修正
+    2.python manage.py makemigrations
+    3.python manage.py migrate

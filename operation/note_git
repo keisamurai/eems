@@ -1,0 +1,41 @@
+<git>
+●ファイルを管理対象から除外する
+    git rm --cached [file name]
+
+    https://qiita.com/megu_ma/items/a438a71c84145f14d04e
+
+●Git　ログを確認する
+    git log
+    https://git-scm.com/book/ja/v1/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E5%B1%A5%E6%AD%B4%E3%81%AE%E9%96%B2%E8%A6%A7
+
+●Git 管理一覧を出力する
+    git ls-files
+
+●Git Branch関連
+    create Branch
+        -> git branch <branch name>
+
+    checkout branch
+        -> git checkout <branch name>
+
+    check where head is
+        -> git branch
+    
+    merge branch
+        -> git checkout master
+           git merge <branchname>
+    
+    delete branch
+        -> git branch -d <branchname>
+           git branch
+
+●Git Remote 関連
+    add remote repository
+        -> #git remote add <remote name> <repogitory name>
+
+    delete remote repository
+        -> #git remote rm <remote name>
+
+    check remote repository
+        -> #git remote -v
+    
